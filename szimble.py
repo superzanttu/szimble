@@ -65,20 +65,24 @@ log = logging.getLogger()
 
 
 class Board:
+    """
+    Slots 1...28 as circle
+
+    Slots for players
+           Start Exit  Goal
+    Blue      1    28  101..104
+    Yellow    8     7  201..204
+    Green    15    14  301..304
+    Red      22    21  401..404
+
+
+    """
 
     def __init__(self):
+        for p in range(0,4):
+            for c in chip
 
-        # Circle of slots
-        self.slots = "" * 28
 
-        # Goal and start slots for players
-        self.start = {}
-        for p in range(0,3):
-            self.start[p] = "" * 4
-        #for p in range(0,3):
-        #    self.start[p]
-        #    for i in range(0,3):
-        #        self.start[p].append("")
 
     def print_board(self):
         print(self.slots)
