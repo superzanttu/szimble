@@ -69,6 +69,10 @@ class BoardSlots:
         for s in range(0,slot_count):
             self.slots.append("")
 
+    def __str__(self):
+        print ("AHHAH")
+        print(self.slots)
+
 class Board:
 
     def __init__(self):
@@ -85,9 +89,9 @@ class Board:
         #    for i in range(0,3):
         #        self.start[p].append("")
 
-    #def print_board(self):
-        #print("Slots:")
-        #print(self.slots)
+    def print_board(self):
+        print("Slots:")
+        print(self.slots)
 
 class Szimble:
     """docstring for ."""
