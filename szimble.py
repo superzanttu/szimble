@@ -27,11 +27,9 @@ import pprint
 
 FOLDER_HOME = os.path.dirname(os.path.abspath(__file__))
 FOLDER_LOG = os.path.join(FOLDER_HOME,"log")
-print("F:",FOLDER_HOME)
-print("F:",FOLDER_LOG)
 # Initialize log folder
-if not os.path.exists('my_folder'):
-    os.makedirs('my_folder')
+if not os.path.exists(FOLDER_LOG):
+    os.makedirs(FOLDER_LOG)
 
 # Logging
 
