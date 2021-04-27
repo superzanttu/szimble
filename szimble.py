@@ -27,6 +27,10 @@ import pprint
 
 FOLDER_HOME = os.path.dirname(os.path.abspath(__file__))
 FOLDER_LOG = ""
+print("F:",FOLDER_HOME)
+# Initialize log folder
+if not os.path.exists('my_folder'):
+    os.makedirs('my_folder')
 
 # Logging
 
@@ -55,7 +59,7 @@ hud_console.setFormatter(hud_formatter)
 
 logging.getLogger('').addHandler(hud_console)
 
-print("F:",FOLDER_HOME)
+
 
 log = logging.getLogger()
 
@@ -66,10 +70,6 @@ log = logging.getLogger()
 def main():
 
     print("F",FOLDER_HOME)
-
-    # Initialize log folder
-    if not os.path.exists('my_folder'):
-        os.makedirs('my_folder')
 
     log.info("===========================================")
     log.info("START")
