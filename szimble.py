@@ -55,12 +55,17 @@ logging.getLogger('').addHandler(hud_console)
 log = logging.getLogger()
 
 
-HOME_FOLDER = os.path.dirname(os.path.abspath(__file__))
-
+FOLDER_HOME = os.path.dirname(os.path.abspath(__file__))
+FOLDER_LOG = ""
 
 
 def main():
 
+    print("F",FOLDER_HOME)
+
+    # Initialize log folder
+    if not os.path.exists('my_folder'):
+        os.makedirs('my_folder')
 
     log.info("===========================================")
     log.info("START")
