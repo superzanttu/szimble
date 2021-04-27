@@ -84,7 +84,7 @@ class Board:
 
         # Goal and start slots for players
         self.start = {}
-        for p in range(0,3)
+        for p in range(0,3):
         self.start[p] = ""
         #for p in range(0,3):
         #    self.start[p]
