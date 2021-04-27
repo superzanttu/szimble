@@ -70,11 +70,15 @@ class Board:
 
         # Circle of slots
         self.slots = []
-        for s in range(1,28):
+        for s in range(0,28):
             self.slots.append("")
 
         # Goal and start slots for players
-
+        self.start = []
+        for p in range(0,3):
+            self.start[p]=[]
+            for i in range(0,3):
+                self.start[p].append("")
 
     def print_board(self):
         print("Slots:")
