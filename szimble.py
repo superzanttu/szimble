@@ -68,7 +68,7 @@ class Board:
 
     def __init__(self):
         self.slot = {}
-        for i in range(1,28)
+        for i in range(1,28):
             self.slot[i]=""
 
 class Szimble:
