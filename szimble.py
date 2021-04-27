@@ -25,6 +25,9 @@ import pprint
 # import time
 # import docstrings
 
+FOLDER_HOME = os.path.dirname(os.path.abspath(__file__))
+FOLDER_LOG = ""
+
 # Logging
 
 
@@ -52,11 +55,12 @@ hud_console.setFormatter(hud_formatter)
 
 logging.getLogger('').addHandler(hud_console)
 
+print("F:",FOLDER_HOME)
+
 log = logging.getLogger()
 
 
-FOLDER_HOME = os.path.dirname(os.path.abspath(__file__))
-FOLDER_LOG = ""
+
 
 
 def main():
