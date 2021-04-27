@@ -71,7 +71,7 @@ class BoardSlots:
             self.slots.append("")
 
     def __str__(self):
-        print(self.name)
+        print(self.name + ":")
         print(self.slots)
 
 class Board:
@@ -91,7 +91,6 @@ class Board:
         #        self.start[p].append("")
 
     def print_board(self):
-        print("Slots:")
         print(self.slots)
 
 class Szimble:
