@@ -66,6 +66,8 @@ log = logging.getLogger()
 class BoardSlots:
     def __init__(self,slot_count):
         self.slots = []
+        for s in range(0,slot_count):
+            self.slots.append("")s
 
 class Board:
 
@@ -73,11 +75,11 @@ class Board:
 
         # Circle of slots
         self.slots = BoardSlots(28)
-        #for s in range(0,28):
-        #    self.slots.append("")
+
 
         # Goal and start slots for players
-        #self.start = []
+        self.start = {}
+        self.start[1] = ""
         #for p in range(0,3):
         #    self.start[p]
         #    for i in range(0,3):
