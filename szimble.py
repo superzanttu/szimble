@@ -69,14 +69,16 @@ class Board:
     def __init__(self):
 
         # Circle of slots
-        self.slot = []
+        self.slots = []
         for s in range(1,28):
-            self.slot.append("")
+            self.slots.append("")
             
         # Goal and start slots for players
 
 
-
+    def print_board(self):
+        print("Slots:")
+        print(self.slots)
 
 class Szimble:
     """docstring for ."""
