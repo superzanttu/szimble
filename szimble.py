@@ -30,6 +30,7 @@ FOLDER_LOG = os.path.join(FOLDER_HOME,"log")
 # Initialize log folder
 if not os.path.exists(FOLDER_LOG):
     os.makedirs(FOLDER_LOG)
+print("Log folder:",FOLDER_HOME)
 
 # Logging
 
@@ -68,7 +69,7 @@ log = logging.getLogger()
 
 def main():
 
-    print("F",FOLDER_HOME)
+
 
     log.info("===========================================")
     log.info("START")
