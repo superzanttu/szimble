@@ -66,7 +66,7 @@ log = logging.getLogger()
 class Szimble(object):
     """docstring for ."""
 
-    def __init__(self, arg):
+    def __init__(self):
         pass
 
 
@@ -82,7 +82,7 @@ def main():
     log.info("Game is runnning. Press ESC to stop.")
 
     game = Szimble()
-    
+
 
     log.info("DONE")
 
