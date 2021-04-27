@@ -63,29 +63,18 @@ logging.getLogger('').addHandler(hud_console)
 
 log = logging.getLogger()
 
-class BoardSlots:
-    def __init__(self,name,slot_count):
-        self.name = name
-        self.slots = []
-        for s in range(0,slot_count):
-            self.slots.append("")
-
-    def __str__(self):
-        print(self.name + ":")
-        print(self.slots)
 
 class Board:
 
     def __init__(self):
 
         # Circle of slots
-        self.slots = BoardSlots("Circle",28)
-
+        self.slots = "" * 28
 
         # Goal and start slots for players
         self.start = {}
         for p in range(0,3):
-            self.start[p] = ""
+            self.start[p] = "" * 4
         #for p in range(0,3):
         #    self.start[p]
         #    for i in range(0,3):
