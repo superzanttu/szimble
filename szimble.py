@@ -71,8 +71,8 @@ class Board:
         # Circle of slots
         self.slot = []
         for s in range(1,28):
-            self.slot[s]=""
-
+            self.slot.append("")
+            
         # Goal and start slots for players
 
 
