@@ -67,7 +67,7 @@ class BoardSlots:
     def __init__(self,slot_count):
         self.slots = []
         for s in range(0,slot_count):
-            self.slots.append("")s
+            self.slots.append("")
 
 class Board:
 
