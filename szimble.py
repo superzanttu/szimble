@@ -72,7 +72,7 @@ class Board:
         self.slots = []
         for s in range(1,28):
             self.slots.append("")
-            
+
         # Goal and start slots for players
 
 
@@ -99,6 +99,7 @@ def main():
     log.info("Game is runnning. Press ESC to stop.")
 
     game = Szimble()
+    game.print_board
 
 
     log.info("DONE")
