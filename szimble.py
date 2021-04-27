@@ -63,11 +63,19 @@ logging.getLogger('').addHandler(hud_console)
 
 log = logging.getLogger()
 
-class Szimble(object):
+
+class Board:
+
+    def __init__(self):
+        self.slot = {}
+        for i in range(1,28)
+            self.slot[i]=""
+
+class Szimble:
     """docstring for ."""
 
     def __init__(self):
-        pass
+        self.board = Board()
 
 
 
