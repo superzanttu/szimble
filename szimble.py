@@ -86,6 +86,7 @@ class Szimble:
     def __init__(self):
         self.board = Board()
 
+        self.board.print_board()
 
 
 
@@ -99,7 +100,7 @@ def main():
     log.info("Game is runnning. Press ESC to stop.")
 
     game = Szimble()
-    game.print_board
+
 
 
     log.info("DONE")
