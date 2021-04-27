@@ -72,7 +72,7 @@ class Board:
     def __init__(self):
 
         # Circle of slots
-        self.slots = BoardSlots()
+        self.slots = BoardSlots(28)
         #for s in range(0,28):
         #    self.slots.append("")
 
