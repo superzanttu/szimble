@@ -139,7 +139,7 @@ def main():
     game = Szimble()
 
 
-    print("DOD")
+    print("DONE 1")
     log.info("DONE")
 
 
