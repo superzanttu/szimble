@@ -33,8 +33,6 @@ if not os.path.exists(FOLDER_LOG):
 print("Log folder:",FOLDER_LOG)
 
 # Logging
-
-
 class ListHandler(logging.Handler):  # Inherit from logging.Handler
     def __init__(self, log_list):
         # run the regular Handler __init__
@@ -64,30 +62,40 @@ logging.getLogger('').addHandler(hud_console)
 log = logging.getLogger()
 
 
-class Board:
+class Peg():
+
+    def __init__(self, player, id)
+        self.player = player
+        self.id = id
+        self.location = 0
+
+
+class Board():
     """
     Slots 1...28 as circle
 
     Slots for players
-           Start Exit  Goal
-    Blue      1    28  101..104
-    Yellow    8     7  201..204
-    Green    15    14  301..304
-    Red      22    21  401..404
+            Enter  Exit  Start    Goal
+    0 Blue      0    27  100..103 110..113
+    1 Yellow    7     6  200..203 210..213
+    2 Green    14    13  300..303 310..313
+    3 Red      21    20  400..403 410..413
 
 
     """
 
     def __init__(self):
+        self.pegs = []
         for p in range(0,4):
-            for c in chip
+            for c in range(0,4):
+                self.pegs.append(Peg(p,c))
 
 
 
     def print_board(self):
         print(self.slots)
 
-class Szimble:
+class Szimble():
     """docstring for ."""
 
     def __init__(self):
