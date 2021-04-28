@@ -11,8 +11,6 @@
 import logging
 import sys
 import math
-import yaml
-import numpy
 import os
 import random
 from collections import defaultdict
