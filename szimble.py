@@ -111,6 +111,8 @@ class Board():
         for p in self.pegs:
             print(p)
 
+        print (Pegs.get_player_peg_locations(0))
+
 class Szimble():
     """docstring for ."""
 
