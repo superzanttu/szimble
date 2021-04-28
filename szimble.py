@@ -93,7 +93,7 @@ class Board():
     def print_board(self):
         print ("Pegs:", self.pegs)
         for p in self.pegs:
-            print(p)
+            pass #print(p)
 
 class Szimble():
     """docstring for ."""
@@ -101,7 +101,7 @@ class Szimble():
     def __init__(self):
         self.board = Board()
 
-        #self.board.print_board()
+        self.board.print_board()
 
 
 
