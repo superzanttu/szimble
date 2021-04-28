@@ -84,6 +84,7 @@ class Peg():
         for i in cls.peg_instances:
             if i.player == player:
                 locations.append(i.location)
+        return(locations)
 
 
 class Board():
