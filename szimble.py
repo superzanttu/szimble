@@ -77,7 +77,7 @@ class Peg():
         print("Moving player %s peg %s to start position" % (self.player, self.id))
         self.location = 100+self.player*100+self.id
 
-    def get_player_peglocations(self,plsye)
+    #def get_player_peglocations(self,player)
 
 
 class Board():
