@@ -120,9 +120,9 @@ class Board():
             for peg in peg_data:
                 for slot in range(0,28):
                     if slot == peg[2]:
-                        board[slot]="[%s%s]" % (peg[0], peg[1])
+                        board[slot]="%s%s" % (peg[0], peg[1])
                     else:
-                        board[slot]= "[  ]"
+                        board[slot]= "--"
         print(board)
 
 
