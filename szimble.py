@@ -72,6 +72,7 @@ class Peg():
 
     def move_peg_to_start(self):
         print("Moving player %s peg %s to start position" % (self.player, self.peg))
+        self.location = 100 + self.player * 100 + id
 
 
 class Board():
@@ -93,7 +94,8 @@ class Board():
                 self.pegs.append(Peg(p,c))
 
     def setup(self):
-        self.location = 100 + self.player * 100 + id
+        for s in self.pegs:
+            s.move_peg_to_start()
 
     def print(self):
         print ("Pegs:", self.pegs)
