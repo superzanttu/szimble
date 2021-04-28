@@ -131,6 +131,7 @@ class Board():
                 for slot in range(0,28):
                     print (slot,peg[2])
                     if slot == peg[2]:
+                        print("HIT")
                         board[slot]="%s%s" % (peg[0], peg[1])
                     else:
                         board[slot]= "--"
