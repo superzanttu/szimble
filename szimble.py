@@ -101,7 +101,7 @@ class Szimble():
     def __init__(self):
         self.board = Board()
 
-        self.board.print_board()
+        #self.board.print_board()
 
 
 
