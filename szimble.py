@@ -78,12 +78,12 @@ class Peg():
         self.location = 100+self.player*100+self.id
 
     @classmethod
-    def get_player_peg_locations(cls,player):
-        locations = []
+    def get_player_pegs(cls,player):
+        pegs = []
         for i in cls.peg_instances:
             if i.player == player:
-                locations.append(i.location)
-        return(locations)
+                locations.append([i.player,i.id,i.location])
+        return(pegs)
 
 
 class Board():
