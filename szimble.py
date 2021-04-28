@@ -81,7 +81,7 @@ class Peg():
     def get_player_peg_locations(cls,player):
         print ("Looking for player pegs")
         for i in cls.peg_instances:
-            print (i)
+            #print (i)
             if i.player == player:
                 print (i.player, i.id, i.location)
 
