@@ -92,8 +92,10 @@ class Board():
             for c in range(0,4):
                 self.pegs.append(Peg(p,c))
 
+    def setup(self):
+        self.location = 100 + self.player * 100 + id
 
-    def print_board(self):
+    def print(self):
         print ("Pegs:", self.pegs)
         for p in self.pegs:
             print(p)
@@ -104,7 +106,9 @@ class Szimble():
     def __init__(self):
         self.board = Board()
 
-        self.board.print_board()
+        self.boart.setup()
+
+        self.board.print()
 
 
 
