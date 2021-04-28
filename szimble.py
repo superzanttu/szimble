@@ -67,7 +67,7 @@ class Peg():
         self.id = id
         self.location = 0
 
-    def A__str__(self):
+    def A_r_str__(self):
         print ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
 
 
@@ -93,7 +93,7 @@ class Board():
     def print_board(self):
         print ("Pegs:", self.pegs)
         for p in self.pegs:
-            pass #print(p)
+            print(p)
 
 class Szimble():
     """docstring for ."""
