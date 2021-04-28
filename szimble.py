@@ -121,7 +121,7 @@ class Board():
     def print(self):
         print("Board status")
 
-        board = [None]*28
+        board = ["--"]*28
 
         for player in range(0,4):
             peg_data = Peg.get_player_pegs(player)
@@ -133,8 +133,7 @@ class Board():
                     if slot == peg[2]:
                         print("HIT")
                         board[slot]="%s%s" % (peg[0], peg[1])
-                    else:
-                        board[slot]= "--"
+            
         print(board)
 
 
