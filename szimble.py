@@ -112,17 +112,17 @@ class Board():
     def print(self):
         print("Board status")
 
-        board = []
-        print (type(board))
+        board = ""
         for player in range(0,4):
             peg_locations = Peg.get_player_peg_locations(player)
             print ("Player %s pegs:" % (player),peg_locations)
             for slot in range(0,28):
                 if slot in peg_locations:
-                    board.append(player)
+                    board += player
                 else:
-                    board.append(".")
+                    board += "."
         print(board)
+
 
 class Szimble():
     """docstring for ."""
