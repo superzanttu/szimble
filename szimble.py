@@ -79,6 +79,7 @@ class Peg():
 
     @classmethod
     def get_player_peg_locations(cls,player):
+        print ("Looking for player pegs")
         for i in cls.pegs:
             if i.player == player:
                 print (i.location)
