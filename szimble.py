@@ -105,10 +105,11 @@ class Szimble():
     """docstring for ."""
 
     def __init__(self):
+        self.active_player = 0
         self.board = Board()
 
-        self.board.setup()
 
+        self.board.setup()
         self.board.print()
 
 
