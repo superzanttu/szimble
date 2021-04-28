@@ -64,7 +64,7 @@ log = logging.getLogger()
 
 class Peg():
 
-    def __init__(self, player, id)
+    def __init__(self, player, id):
         self.player = player
         self.id = id
         self.location = 0
