@@ -114,7 +114,7 @@ class Board():
 
         board = ""
         for player in range(0,4):
-            peg_locations = Peg.get_player_peg_locations(player)
+            peg_locations = Peg.get_player_pegs(player)
             print ("Player %s pegs:" % (player),peg_locations)
             for slot in range(0,28):
                 if slot in peg_locations:
