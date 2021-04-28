@@ -68,7 +68,7 @@ class Peg():
         self.player = player
         self.id = id
         self.location = 0
-        Peg.peg_instances.append(self)
+        self.__class__.peg_instances.append(self)
 
     def __str__(self):
         return ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
