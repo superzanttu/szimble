@@ -71,7 +71,7 @@ class Peg():
         print (self.player)
         print (self.id)
         print (self.location)
-        print ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
+        return ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
 
 
 class Board():
