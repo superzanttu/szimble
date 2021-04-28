@@ -144,6 +144,7 @@ class Szimble():
         self.board.setup()
         self.board.print()
         Peg.set_player_peg_position(0,1,20)
+        self.board.print()
 
 
 def main():
