@@ -122,7 +122,7 @@ class Board():
                     if slot == peg[2]:
                         board[slot]="[%s%s]" % (peg[0], peg[1])
                     else:
-                        board += "[  ]"
+                        board[slot]= "[  ]"
         print(board)
 
 
