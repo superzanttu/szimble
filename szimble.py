@@ -79,7 +79,9 @@ class Peg():
 
     @classmethod
     def get_player_peg_locations(cls,player):
-        print [inst for inst in cls.instances if inst.value == value]
+        for i in cls.pegs:
+            if i.player = player:
+                print (i.location)
 
 
 class Board():
