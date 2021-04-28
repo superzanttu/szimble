@@ -111,11 +111,10 @@ class Board():
             s.move_peg_to_start()
 
     def print(self):
-        print("Print board")
-        #for p in self.pegs:
-        #    print(p)
+        print("Board status")
 
-        print(Peg.get_player_peg_locations(0))
+        for p in range(0,4):
+            print ("Player %s pegs:" % (p),Peg.get_player_peg_locations(p))
 
 class Szimble():
     """docstring for ."""
