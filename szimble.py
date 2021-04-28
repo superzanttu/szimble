@@ -120,7 +120,7 @@ class Board():
                 if slot in peg_locations:
                     board += player
                 else:
-                    board += "."
+                    board += "[  ]"
         print(board)
 
 
