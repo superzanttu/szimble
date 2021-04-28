@@ -79,11 +79,11 @@ class Peg():
 
     @classmethod
     def get_player_pegs(cls,player):
-        pegs = []
+        pegs_data= []
         for i in cls.peg_instances:
             if i.player == player:
-                pegs.append([i.player,i.id,i.location])
-        return(pegs)
+                pegs_data.append([i.player,i.id,i.location])
+        return(pegs_data)
 
 
 class Board():
