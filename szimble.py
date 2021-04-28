@@ -122,6 +122,7 @@ class Board():
                     board.append(player)
                 else:
                     board.append(".")
+        print(board)
 
 class Szimble():
     """docstring for ."""
