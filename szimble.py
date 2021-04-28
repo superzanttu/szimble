@@ -62,10 +62,13 @@ log = logging.getLogger()
 
 class Peg():
 
+    self.pegs
+
     def __init__(self, player, id):
         self.player = player
         self.id = id
         self.location = 0
+        self.pegs.append(self)
 
     def __str__(self):
         return ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
@@ -73,6 +76,8 @@ class Peg():
     def move_peg_to_start(self):
         print("Moving player %s peg %s to start position" % (self.player, self.id))
         self.location = 100+self.player*100+self.id
+
+    def get_player_peglocations(self,plsye)
 
 
 class Board():
