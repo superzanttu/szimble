@@ -85,6 +85,7 @@ class Peg():
                 pegs_data.append([i.player,i.id,i.location])
         return(pegs_data)
 
+    @classmethod
     def set_player_peg_position(cls,player,id,location):
         for i in cls.peg_instances:
             if i.player == player and i.id == id:
@@ -115,6 +116,8 @@ class Board():
         for s in self.pegs:
             s.move_peg_to_start()
 
+
+
     def print(self):
         print("Board status")
 
@@ -140,6 +143,7 @@ class Szimble():
         self.board = Board()
         self.board.setup()
         self.board.print()
+        Peg.set_player_peg_position(0,1,20)
 
 
 def main():
