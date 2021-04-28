@@ -127,6 +127,7 @@ class Board():
             peg_data = Peg.get_player_pegs(player)
             print ("Player %s pegs:" % (player),peg_data)
             for peg in peg_data:
+                print (peg)
                 for slot in range(0,28):
                     if slot == peg[2]:
                         board[slot]="%s%s" % (peg[0], peg[1])
