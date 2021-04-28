@@ -91,7 +91,7 @@ class Board():
 
 
     def print_board(self):
-        print(self.slots)
+        print(self.pegs)
 
 class Szimble():
     """docstring for ."""
