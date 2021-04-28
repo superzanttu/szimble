@@ -98,7 +98,6 @@ class Board():
             s.move_peg_to_start()
 
     def print(self):
-        print ("Pegs:", self.pegs)
         for p in self.pegs:
             print(p)
 
