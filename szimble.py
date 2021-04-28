@@ -105,10 +105,12 @@ class Board():
                 self.pegs.append(Peg(p,c))
 
     def setup(self):
+        print("Setup board")
         for s in self.pegs:
             s.move_peg_to_start()
 
     def print(self):
+        print("Print board")
         #for p in self.pegs:
         #    print(p)
 
