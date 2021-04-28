@@ -121,12 +121,13 @@ class Szimble():
 
     def __init__(self):
         self.active_player = 0
+        print ("sz 0")
         self.board = Board()
-
-
+        print ("sz 1")
         self.board.setup()
+        print ("sz 2")
         self.board.print()
-
+        print ("sz 3")
 
 
 def main():
