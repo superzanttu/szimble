@@ -62,13 +62,13 @@ log = logging.getLogger()
 
 class Peg():
 
-    pegs = []
+    peg_instances = []
 
     def __init__(self, player, id):
         self.player = player
         self.id = id
         self.location = 0
-        Peg.pegs.append(self)
+        Peg.peg_instances.append(self)
 
     def __str__(self):
         return ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
@@ -80,10 +80,10 @@ class Peg():
     @classmethod
     def get_player_peg_locations(cls,player):
         print ("Looking for player pegs")
-        for i in cls.pegs:
+        for i in cls.peg_instances:
             print (i)
             if i.player == player:
-                print (i.location)
+                print (i.player, i.id, i.location)
 
 
 class Board():
