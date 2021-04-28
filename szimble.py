@@ -119,8 +119,8 @@ class Board():
             print ("Player %s pegs:" % (player),peg_data)
             for peg in peg_data:
                 for slot in range(0,28):
-                    if slot in peg_locations:
-                        board += player
+                    if slot == peg[2]:
+                        board[slot]="[%s%s]" % (peg[0], peg[1])
                     else:
                         board += "[  ]"
         print(board)
