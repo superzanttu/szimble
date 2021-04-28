@@ -73,9 +73,9 @@ class Peg():
 
 class Board():
     """
-    Slots 1...28 as circle
+    Slots 0...27 as circle
 
-    Slots for players
+    Slot definitions
             Enter  Exit  Start    Goal
     0 Blue      0    27  100..103 110..113
     1 Yellow    7     6  200..203 210..213
@@ -91,6 +91,7 @@ class Board():
 
 
     def print_board(self):
+        print ("Pegs:", self.pegs)
         for p in self.pegs:
             print(p)
 
