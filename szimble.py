@@ -81,8 +81,6 @@ class Board():
     1 Yellow    7     6  200..203 210..213
     2 Green    14    13  300..303 310..313
     3 Red      21    20  400..403 410..413
-
-
     """
 
     def __init__(self):
@@ -92,9 +90,9 @@ class Board():
                 self.pegs.append(Peg(p,c))
 
 
-
     def print_board(self):
-        print(self.pegs)
+        for p in self.pegs:
+            print(p)
 
 class Szimble():
     """docstring for ."""
