@@ -71,7 +71,7 @@ class Peg():
         return ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
 
     def move_peg_to_start(self):
-        print("Moving player %s peg %s to start position" % (self.player, self.peg))
+        print("Moving player %s peg %s to start position" % (self.player, self.id))
         self.location = 100 + self.player * 100 + id
 
 
