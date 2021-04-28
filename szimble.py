@@ -87,7 +87,7 @@ class Peg():
 
     def set_player_peg_position(cls,player,id,location):
         for i in cls.peg_instances:
-            if i.player == player and i.id = id:
+            if i.player == player and i.id == id:
                 i.location = location
                 break
 
