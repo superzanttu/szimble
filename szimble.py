@@ -113,10 +113,10 @@ class Board():
         print("Board status")
 
         board = [None]*28
-        
+
         for player in range(0,4):
             peg_data = Peg.get_player_pegs(player)
-            print ("Player %s pegs:" % (player),pegs)
+            print ("Player %s pegs:" % (player),peg_data)
             for peg in peg_data:
                 for slot in range(0,28):
                     if slot in peg_locations:
