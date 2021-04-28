@@ -113,7 +113,7 @@ class Board():
         print("Board status")
 
         board = []
-        board(0)="lkj"
+        board[0]="lkj"
         for player in range(0,4):
             peg_data = Peg.get_player_pegs(player)
             print ("Player %s pegs:" % (player),pegs)
