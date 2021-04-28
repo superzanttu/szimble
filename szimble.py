@@ -112,15 +112,17 @@ class Board():
     def print(self):
         print("Board status")
 
-        board = ""
+        board = []
+        board(0)="lkj"
         for player in range(0,4):
-            peg_locations = Peg.get_player_pegs(player)
-            print ("Player %s pegs:" % (player),peg_locations)
-            for slot in range(0,28):
-                if slot in peg_locations:
-                    board += player
-                else:
-                    board += "[  ]"
+            peg_data = Peg.get_player_pegs(player)
+            print ("Player %s pegs:" % (player),pegs)
+            for peg in peg_data:
+                for slot in range(0,28):
+                    if slot in peg_locations:
+                        board += player
+                    else:
+                        board += "[  ]"
         print(board)
 
 
