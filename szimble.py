@@ -109,8 +109,8 @@ class Board():
             s.move_peg_to_start()
 
     def print(self):
-        for p in self.pegs:
-            print(p)
+        #for p in self.pegs:
+        #    print(p)
 
         print (Peg.get_player_peg_locations(0))
 
