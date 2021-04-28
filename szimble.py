@@ -71,7 +71,7 @@ class Peg():
         Peg.peg_instances.append(self)
 
     def __str__(self):
-        return ("xPlayer %s peg %s is at location %s" % (self.player, self.id, self.location))
+        return ("Player %s peg %s is at location %s" % (self.player, self.id, self.location))
 
     def move_peg_to_start(self):
         print("Moving player %s peg %s to start position" % (self.player, self.id))
