@@ -68,7 +68,7 @@ class Peg():
         self.location = 0
 
     def __str__(self):
-        print ("Player %s peg %d is at location %s" %(self.player, self.id, self.location))
+        print ("Player %s peg %d is at location %s" % (self.player, self.id, self.location))
 
 
 class Board():
