@@ -80,10 +80,10 @@ class Peg():
     @classmethod
     def get_player_peg_locations(cls,player):
         print ("Looking for player pegs")
+        locations = []
         for i in cls.peg_instances:
             if i.player == player:
-                print (i.player, i.id, i.location)
-        print ("kjh")
+                locations.append(i.location)
 
 
 class Board():
