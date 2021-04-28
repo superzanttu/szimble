@@ -82,7 +82,7 @@ class Peg():
         pegs = []
         for i in cls.peg_instances:
             if i.player == player:
-                locations.append([i.player,i.id,i.location])
+                pegs.append([i.player,i.id,i.location])
         return(pegs)
 
 
