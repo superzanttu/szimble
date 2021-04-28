@@ -112,7 +112,7 @@ class Board():
     def print(self):
         print("Board status")
 
-        board = "" * 28
+        board = "." * 28
         for p in range(0,4):
             print ("Player %s pegs:" % (p),Peg.get_player_peg_locations(p))
         print (board)
