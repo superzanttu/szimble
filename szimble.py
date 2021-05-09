@@ -91,11 +91,12 @@ class Player():
 
         # Pegs in the Game
         if self.pegs_in_game > 0:
-            self.pegs_in_game += 1
+            self.pegs_in_game -= 1
 
     def status(self):
         print ("Player: %s" % self.name)
-        print ("...spegs at: %s"  % (self.pegs))
+        print ("...pegs at: %s"  % (self.pegs))
+        print ("...pegs in game: %s"  % (self.pegs_in_game))
         print (self.slots)
 
     def play(self):
