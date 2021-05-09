@@ -165,7 +165,8 @@ class Player():
         print("Move player %s peg %s to start" % (self.name, id))
 
         # Clear current location
-        self.slots[self.pegs[id]] = None
+        if self.pegs[id] != None:
+            self.slots[self.pegs[id]] = None
 
         # Move peg to empty start slot
         for i in self.slots_start:
