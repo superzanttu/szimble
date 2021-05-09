@@ -172,7 +172,8 @@ class Player():
 
     def status(self):
         print ("Player: %s" % self.name)
-        print ("....pegs at: %s"  % (self.pegs))
+        print ("...spegs at: %s"  % (self.pegs))
+        print (self.slots)
 
 def main():
 
