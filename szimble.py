@@ -138,7 +138,7 @@ class Player():
         for id in range(0,4):
             target_slot = self.slot_enter
             if self.pegs_in_game == 0 and dice == 6 and self.slots[target_slot] == None:
-                action['enter'] += 90
+                action["enter%s" % id] += 90
                 print ("RULE: No pegs in game")
 
         # Move peg X to goal
