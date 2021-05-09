@@ -188,10 +188,10 @@ class Player():
                 selected_rule_name = k
                 target_slot = rule_target_slot[k]
 
-        print("Selected action: %s" % selected_action_name)
+        print("Selected rule: %s" % selected_rule_name)
 
-        action = selected_action_name[:1]
-        peg = selected_action_name[1:]
+        action = selected_rule_name[:1]
+        peg = selected_rule_name[1:]
         print("Command: %s Peg: %s Target slot:"  % (action,peg,target_slot))
 
         if action == "E": # Move peg to enter slot
