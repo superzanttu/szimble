@@ -183,12 +183,12 @@ class Player():
         print("Selected action: %s" % selected_action_name)
 
         action = selected_action_name[:1]
-        action = command = selected_action_name[1:]
-        print("Command: %s Peg: %s"  % (cmd,p))
+        peg = selected_action_name[1:]
+        print("Command: %s Peg: %s"  % (action,peg))
 
-        if cmd == "E": # Move peg to enter slot
+        if action == "E": # Move peg to enter slot
             self.move_peg_to_game(cmd_peg)
-        elif cmd == "M": # Move peg to enter slot
+        elif action == "M": # Move peg to enter slot
             self.move_peg_to_slot(cmd_peg, )
 
 
