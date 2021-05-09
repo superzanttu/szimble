@@ -187,6 +187,10 @@ def main():
 
     player = Player("Red")
     player.move_peg_to_start(3)
+    player.move_peg_to_start(2)
+    player.move_peg_to_start(0)
+    player.move_peg_to_start(1)
+
     player.status()
 
 
