@@ -124,7 +124,7 @@ class Player():
         action = {}
         # 1 - Move peg to enter slot
         if self.pegs_in_game == 0 and dice == 6:
-            action()
+            action['enter'] += 100
 
         # 2 - Move peg
         # 3 - Move peg to goal
