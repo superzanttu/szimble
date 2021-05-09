@@ -181,6 +181,10 @@ class Player():
         print ("...spegs at: %s"  % (self.pegs))
         print (self.slots)
 
+    def play(self):
+        dice = random.random.randrange(1,6)
+        print("Dice: %s " % dice)
+
 def main():
 
 
@@ -199,8 +203,8 @@ def main():
     user_input=""
     while user_input == "":
         player.status()
+        player.play()
         user_input = input()
-
 
     log.info("DONE")
 
