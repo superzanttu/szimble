@@ -98,16 +98,12 @@ class Player():
         print("Dice: %s " % dice)
 
 
-
-
 def main():
-
-
 
     log.info("===========================================")
     log.info("START")
 
-    log.info("Game is runnning. Press ESC to stop.")
+    log.info("Game is runnning.")
 
     player = Player("Red")
     player.move_peg_to_start(0)
@@ -115,10 +111,12 @@ def main():
     player.move_peg_to_start(2)
     player.move_peg_to_start(3)
 
+    player.status()
+
     user_input=""
     while user_input == "":
-        player.status()
         player.play()
+        player.status()
         user_input = input()
 
     log.info("DONE")
