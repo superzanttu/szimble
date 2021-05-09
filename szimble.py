@@ -73,7 +73,7 @@ class Player():
         self.slot_enter_enemy = [11,18,25]
         self.slot_goal1 = 32
         self.slot_goal2 = 35
-        self.slots =  [None for x in range(0,35)]
+        self.slots =  [None for x in range(0,36)]
 
     def move_peg_to_start(self,id):
         print("Move player %s peg %s to start" % (self.name, id))
