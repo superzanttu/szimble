@@ -137,13 +137,15 @@ class Player():
         dice = random.randrange(1,7)
         print("Dice: %s " % dice)
 
-        rule = {}
+        rule_score = {}
+        rule_target_slot = {}
         # E = move peg to enter slot
         # M = move peg to empty slot
         # G = move peg to goal
         for r in ['E','M','G']:
             for p in range(0,4):
-                rule["%s%s" % (r,p)] =0
+                rule_score["%s%s" % (r,p)] =0
+                rule_target_slot["%s%s" % (r,p)] = None
 
         rule['N0'] = 1 # Don't know what to do
 
@@ -153,43 +155,49 @@ class Player():
         for id in range(0,4):
             target_slot = self.slot_enter
             if self.pegs_in_game == 0 and dice == 6 and self.slots[target_slot] == None:
-                rule["E%s" % id] += 90
+                rule_score["E%s" % id] += 90
+                rule_target_slot["G%s" % id] = target_slot
                 print ("PEG %s RULE: No pegs in game" % id)
 
         # Move peg X to goal
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if target_slot in self.slots_goal and self.slots[target_slot] == None:
-                rule["G%s" % id] += 100
+                rule_score["G%s" % id] += 100
+                rule_target_slot["G%s" % id] = target_slot
                 print ("PEG %s RULE: Peg %s can move to goal" % (id,id))
 
         # Move peg X
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
-                rule["M%s" % id] += 1
+                rule_score["M%s" % id] += 1
+                rule_target_slot["G%s" % id] = target_slot
                 print ("PEG %S RULE: Move peg %s" % (id,id))
 
         print("Rule outcome: %s" % rule)
 
         # Select best rule based on value
-        selected_action_max = 0
-        selected_action_name = ""
-        for k in rule.keys():
-            if rule[k] > selected_action_max:
-                selected_action_max = rule[k]
-                selected_action_name = k
+        selected_rule_score = 0
+        selected_rule_name = ""
+        for k in rule_score.keys():
+            if rule_score[k] > selected_rule_score:
+                selected_rule_score = rule_score[k]
+                selected_rule_name = k
+                target_slot = rule_target_slot[k]
 
         print("Selected action: %s" % selected_action_name)
 
         action = selected_action_name[:1]
         peg = selected_action_name[1:]
-        print("Command: %s Peg: %s"  % (action,peg))
+        print("Command: %s Peg: %s Target slot:"  % (action,peg,target_slot))
 
         if action == "E": # Move peg to enter slot
-            self.move_peg_to_game(cmd_peg)
+            self.move_peg_to_game(peg)
         elif action == "M": # Move peg to enter slot
-            self.move_peg_to_slot(cmd_peg, )
+            self.move_peg_to_slot(peg,target_slot )
+        elif action == "G": # Move peg to goal slot
+            self.move_peg_to_slot(peg,target_slot )
 
 
 
