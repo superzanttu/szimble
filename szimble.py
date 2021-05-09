@@ -60,7 +60,7 @@ logging.getLogger('').addHandler(hud_console)
 log = logging.getLogger()
 
 
-class Peg():
+class Old_Peg():
 
     peg_instances = []
 
@@ -93,7 +93,7 @@ class Peg():
                 break
 
 
-class Board():
+class Old_Board():
     """
     Slots 0...27 as circle
 
@@ -133,11 +133,11 @@ class Board():
                     if slot == peg[2]:
                         print("HIT")
                         board[slot]="%s%s" % (peg[0], peg[1])
-            
+
         print(board)
 
 
-class Szimble():
+class Old_Szimble():
     """docstring for ."""
 
     def __init__(self):
@@ -147,6 +147,14 @@ class Szimble():
         self.board.print()
         Peg.set_player_peg_position(0,1,20)
         self.board.print()
+
+class Player():
+
+    def __init__(self, player_color):
+        self.color = player_color
+
+
+
 
 
 def main():
@@ -158,7 +166,7 @@ def main():
 
     log.info("Game is runnning. Press ESC to stop.")
 
-    game = Szimble()
+    player = Player()
 
     log.info("DONE")
 
