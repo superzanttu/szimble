@@ -170,7 +170,7 @@ class Player():
                 rule["M%s" % id] += 1
                 print ("PEG %S RULE: Move peg %s" % (id,id))
 
-        print("Rule outcome: %s" % action)
+        print("Rule outcome: %s" % ruler)
 
         # Select best rule based on value
         selected_action_max = 0
