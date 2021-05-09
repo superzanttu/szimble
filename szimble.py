@@ -142,7 +142,7 @@ class Player():
         # M = move peg to empty slot
         # G = move peg to goal
         for r in ['E','M','G']:
-            for p in range(0,4)
+            for p in range(0,4):
                 rule["%s%s" % (i,p)] =0
 
         rule['N0'] = 1 # Don't know what to do
