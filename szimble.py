@@ -172,6 +172,8 @@ def main():
     log.info("Game is runnning. Press ESC to stop.")
 
     player = Player("Red")
+    player.move_peg_to_start(3)
+
 
     log.info("DONE")
 
