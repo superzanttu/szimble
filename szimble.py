@@ -139,21 +139,21 @@ class Player():
             target_slot = self.slot_enter
             if self.pegs_in_game == 0 and dice == 6 and self.slots[target_slot] == None:
                 action["enter%s" % id] += 90
-                print ("RULE: No pegs in game")
+                print ("PEG %s RULE: No pegs in game" % id)
 
         # Move peg X to goal
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if target_slot in self.slots_goal and self.slots[target_slot] == None:
                 action["move%s" % id] += 100
-                print ("RULE: Peg %s can move to goal" % id)
+                print ("PEG %s RULE: Peg %s can move to goal" % (id,id))
 
         # Move peg X
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
                 action["move%s" % id] += 1
-                print ("RULE: Move peg %s" % id)
+                print ("PEG %S RULE: Move peg %s" % (id,id))
 
         print("Rule outcome: %s" % action)
 
