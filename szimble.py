@@ -111,6 +111,22 @@ class Player():
         # Pegs in the Game
         self.pegs_in_game += 1
 
+    def move_peg_to_slot(self,id,target_slot):
+        print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
+
+        # Clear current location
+        if self.pegs[id] != None:
+            self.slots[self.pegs[id]] = None
+
+        # Move peg to new slot
+        if self.slots[target_slot] == None:
+            self.slots[target_slot] = id
+            self.pegs[id]= target_slot
+        else:
+            print("ERROR: Target slot occupied")
+            exit(1)
+
+
     def status(self):
         print ("Player: %s" % self.name)
         print ("...pegs at: %s"  % (self.pegs))
@@ -121,16 +137,15 @@ class Player():
         dice = random.randrange(1,7)
         print("Dice: %s " % dice)
 
-        action = {}
-        action['E0'] = 0 # Move peg 1 to enter slot
-        action['E1'] = 0 # Move peg 1 to enter slot
-        action['E2'] = 0 # Move peg 1 to enter slot
-        action['E3'] = 0 # Move peg 1 to enter slot
-        action['M0'] = 0 # Move peg 1
-        action['M1'] = 0 # Move peg 2
-        action['M2'] = 0 # Move peg 3s
-        action['M3'] = 0 # Move peg 4
-        action['N0'] = 1 # Don't know what to do
+        rule = {}
+        # E = move peg to enter slot
+        # M = move peg to empty slot
+        # G = move peg to goal
+        for r in ['E','M','G']:
+            for p in range(0,4)
+                rule["%s%s" % (i,p)] =0
+
+        rule['N0'] = 1 # Don't know what to do
 
 
 
@@ -138,21 +153,21 @@ class Player():
         for id in range(0,4):
             target_slot = self.slot_enter
             if self.pegs_in_game == 0 and dice == 6 and self.slots[target_slot] == None:
-                action["E%s" % id] += 90
+                rule["E%s" % id] += 90
                 print ("PEG %s RULE: No pegs in game" % id)
 
         # Move peg X to goal
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if target_slot in self.slots_goal and self.slots[target_slot] == None:
-                action["M%s" % id] += 100
+                rule["G%s" % id] += 100
                 print ("PEG %s RULE: Peg %s can move to goal" % (id,id))
 
         # Move peg X
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
-                action["M%s" % id] += 1
+                rule["M%s" % id] += 1
                 print ("PEG %S RULE: Move peg %s" % (id,id))
 
         print("Rule outcome: %s" % action)
@@ -160,17 +175,21 @@ class Player():
         # Select best rule based on value
         selected_action_max = 0
         selected_action_name = ""
-        for k in action.keys():
-            if action[k] > selected_action_max:
-                selected_action_max = action[k]
+        for k in rule.keys():
+            if rule[k] > selected_action_max:
+                selected_action_max = rule[k]
                 selected_action_name = k
 
         print("Selected action: %s" % selected_action_name)
 
-        cmd = selected_action_name[:1]
-        p = command = selected_action_name[1:]
+        action = selected_action_name[:1]
+        action = command = selected_action_name[1:]
         print("Command: %s Peg: %s"  % (cmd,p))
 
+        if cmd == "E": # Move peg to enter slot
+            self.move_peg_to_game(cmd_peg)
+        elif cmd == "M": # Move peg to enter slot
+            self.move_peg_to_slot(cmd_peg, )
 
 
 
