@@ -127,7 +127,7 @@ class Player():
         action['move2'] = 0 # Move peg 2
         action['move3'] = 0 # Move peg 3
         action['move4'] = 0 # Move peg 4
-        action['none'] = 100 # Don't know what to do
+        action['none'] = 1 # Don't know what to do
 
 
         # Move peg to enter slot
@@ -162,6 +162,8 @@ def main():
 
     log.info("===========================================")
     log.info("START")
+
+    random.seed()
 
     log.info("Game is runnning.")
 
