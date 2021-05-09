@@ -176,7 +176,8 @@ class Player():
                 rule_target_slot["G%s" % id] = target_slot
                 print ("PEG %S RULE: Move peg %s" % (id,id))
 
-        print("Rule outcome: %s" % rule)
+        print("Rule scores: %s" % rule_score)
+        print("Rule target slots: %s" % rule_target_slot)
 
         # Select best rule based on value
         selected_rule_score = 0
