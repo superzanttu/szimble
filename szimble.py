@@ -164,7 +164,7 @@ class Player():
         print("Move player %s peg %s to start" % (self.color, id))
         for i in range(0,4):
             print (i)
-            if self.slots_start[i] == None
+            if self.slots_start[i] == None:
                 self.slots_start[i] = id
 
         pass
