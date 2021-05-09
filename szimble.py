@@ -93,6 +93,24 @@ class Player():
         if self.pegs_in_game > 0:
             self.pegs_in_game -= 1
 
+    def move_peg_to_game(self,id):
+        print("Move player %s peg %s to game" % (self.name, id))
+
+        # Clear current location
+        if self.pegs[id] != None:
+            self.slots[self.pegs[id]] = None
+
+        # Move peg to enter slot
+        if self.slots[self.slot_enter] == None:
+            self.slots[self.slot_enter] = id:
+            self.pegs[id]= self.slot_enter
+        else
+            print("ERROR: Enter slot occupied")
+            exit(1)
+
+        # Pegs in the Game
+        self.pegs_in_game += 1
+
     def status(self):
         print ("Player: %s" % self.name)
         print ("...pegs at: %s"  % (self.pegs))
@@ -102,6 +120,11 @@ class Player():
     def play(self):
         dice = random.randrange(1,6)
         print("Dice: %s " % dice)
+
+        # 1 - Move peg to enter slot
+
+        # 2 - Move peg
+        # 3 - Move peg to goal
 
 
 def main():
