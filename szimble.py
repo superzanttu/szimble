@@ -173,7 +173,7 @@ class Player():
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
                 rule_score["M%s" % id] += 1
-                rule_target_slot["G%s" % id] = target_slot
+                rule_target_slot["M%s" % id] = target_slot
                 print ("PEG %s RULE: Move peg %s" % (id,id))
 
         print("Rule scores: %s" % rule_score)
