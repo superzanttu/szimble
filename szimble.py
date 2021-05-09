@@ -174,7 +174,7 @@ class Player():
             if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
                 rule_score["M%s" % id] += 1
                 rule_target_slot["G%s" % id] = target_slot
-                print ("PEG %S RULE: Move peg %s" % (id,id))
+                print ("PEG %s RULE: Move peg %s" % (id,id))
 
         print("Rule scores: %s" % rule_score)
         print("Rule target slots: %s" % rule_target_slot)
