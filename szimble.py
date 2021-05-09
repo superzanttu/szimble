@@ -104,7 +104,7 @@ class Player():
         if self.slots[self.slot_enter] == None:
             self.slots[self.slot_enter] = id
             self.pegs[id]= self.slot_enter
-        else
+        else:
             print("ERROR: Enter slot occupied")
             exit(1)
 
