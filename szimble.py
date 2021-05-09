@@ -170,6 +170,10 @@ class Player():
 
         pass
 
+    def statu(self):
+        print ("Player: %s" % self.player)
+        print ("....pegs at: %s"  % (self.pegs))
+
 def main():
 
 
