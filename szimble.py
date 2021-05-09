@@ -130,7 +130,7 @@ class Player():
         action['M1'] = 0 # Move peg 2
         action['M2'] = 0 # Move peg 3s
         action['M3'] = 0 # Move peg 4
-        action['ERROR'] = 1 # Don't know what to do
+        action['NONE'] = 1 # Don't know what to do
 
 
 
