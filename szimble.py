@@ -147,7 +147,8 @@ class Player():
                 rule_score["%s%s" % (r,p)] =0
                 rule_target_slot["%s%s" % (r,p)] = None
 
-        rule['N0'] = 1 # Don't know what to do
+        rule_score['N0'] = 1 # Don't know what to do
+        rule_target_slo['N0'] = None
 
 
 
