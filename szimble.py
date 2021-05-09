@@ -182,7 +182,7 @@ class Player():
         print (self.slots)
 
     def play(self):
-        dice = random.random.randrange(1,6)
+        dice = random.randrange(1,6)
         print("Dice: %s " % dice)
 
 def main():
