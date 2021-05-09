@@ -150,9 +150,6 @@ class Player():
                 action["move%s" % id] += 1
                 print ("RULE: Move peg %s" % id)
 
-
-
-        # Move peg
         print("Rule outcome: %s" % action)
 
         # Select best rule based on value
