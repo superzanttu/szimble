@@ -172,6 +172,7 @@ class Player():
         for i in self.slots_start:
             if self.slots[i] == None:
                 self.slots[i] = id
+                self.pegs[id] = i
                 print("...peg moved to slot %s" % i)
                 return
 
