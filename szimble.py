@@ -196,7 +196,10 @@ def main():
     player.move_peg_to_start(2)
     player.move_peg_to_start(3)
 
-    player.status()
+
+    while True
+        player.status()
+        a = input()
 
 
     log.info("DONE")
