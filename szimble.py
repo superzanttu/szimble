@@ -171,7 +171,7 @@ def main():
 
     log.info("Game is runnning. Press ESC to stop.")
 
-    player = Player()
+    player = Player("Red")
 
     log.info("DONE")
 
