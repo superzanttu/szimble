@@ -122,14 +122,14 @@ class Player():
         print("Dice: %s " % dice)
 
         action = {}
+        action['enter0'] = 0 # Move peg 1 to enter slot
         action['enter1'] = 0 # Move peg 1 to enter slot
         action['enter2'] = 0 # Move peg 1 to enter slot
         action['enter3'] = 0 # Move peg 1 to enter slot
-        action['enter4'] = 0 # Move peg 1 to enter slot
-        action['move1'] = 0 # Move peg 1
-        action['move2'] = 0 # Move peg 2
-        action['move3'] = 0 # Move peg 3
-        action['move4'] = 0 # Move peg 4
+        action['move0'] = 0 # Move peg 1
+        action['move1'] = 0 # Move peg 2
+        action['move2'] = 0 # Move peg 3
+        action['move3'] = 0 # Move peg 4
         action['none'] = 1 # Don't know what to do
 
 
