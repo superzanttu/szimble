@@ -146,7 +146,7 @@ class Player():
         # Move peg X
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
-            if self.pegs[id] != None and self.slots[target_slot] == None:
+            if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
                 action["move%s" % id] += 1
                 print ("RULE: Move peg %s" % id)
 
