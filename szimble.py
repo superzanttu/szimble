@@ -166,6 +166,7 @@ class Player():
             print (i)
             if self.slots_start[i] == None:
                 self.slots_start[i] = id
+                print("...peg moved to slot %s" % i)
 
         pass
 
