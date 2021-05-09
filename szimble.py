@@ -167,9 +167,9 @@ class Player():
 
         print("Selected action: %s" % selected_action_name)
 
-        command = selected_action_name[:1]
-        peg = command = selected_action_name[1:1]
-        print("Command: %s Peg: %s"  % (command,peg))
+        c = selected_action_name[:1]
+        p = command = selected_action_name[1:1]
+        print("Command: %s Peg: %s"  % (c,p))
 
 
 
