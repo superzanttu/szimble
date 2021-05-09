@@ -150,9 +150,9 @@ class Old_Szimble():
 
 class Player():
 
-    def __init__(self, player_color):
-        print("Init player: %s" % player_color)
-        self.color = player_color
+    def __init__(self, player_name):
+        print("Init player: %s" % player_name)
+        self.name = player_name
         # Slot index 0..35
         self.pegs = [None, None, None, None]
         self.slots_start = [0,1,2,3]
@@ -171,7 +171,7 @@ class Player():
         pass
 
     def status(self):
-        print ("Player: %s" % self.player)
+        print ("Player: %s" % self.name)
         print ("....pegs at: %s"  % (self.pegs))
 
 def main():
