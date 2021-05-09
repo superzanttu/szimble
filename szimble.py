@@ -109,6 +109,9 @@ class Player():
             print("ERROR: Enter slot occupied")
             exit(1)
 
+
+        print("FIXME: move if enter slot is occupied")
+
         # Pegs in the Game
         self.pegs_in_game += 1
 
@@ -130,6 +133,8 @@ class Player():
         # Pegs in the Game
         self.pegs_in_game -= 1
         self.pegs[id]= None
+
+        print("FIXME: don't move if peg is in goal allready")
 
 
     def move_peg_to_slot(self,id,target_slot):
