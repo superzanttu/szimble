@@ -102,7 +102,7 @@ class Player():
 
         # Move peg to enter slot
         if self.slots[self.slot_enter] == None:
-            self.slots[self.slot_enter] = id:
+            self.slots[self.slot_enter] = id
             self.pegs[id]= self.slot_enter
         else
             print("ERROR: Enter slot occupied")
