@@ -151,6 +151,7 @@ class Old_Szimble():
 class Player():
 
     def __init__(self, player_color):
+        print("Init player %s" % player_color)
         self.color = player_color
         # Slot index 0..35
         self.pegs = [None, None, None, None]
@@ -160,6 +161,7 @@ class Player():
         self.slots_goal = [32,33,34,35]
 
     def move_peg_to_start(self,id):
+        log
         pass
 
 def main():
