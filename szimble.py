@@ -122,12 +122,26 @@ class Player():
         print("Dice: %s " % dice)
 
         action = {}
-        # 1 - Move peg to enter slot
-        if self.pegs_in_game == 0 and dice == 6:
-            action['enter'] = 100
+        action['enter'] = 0 # Move peg to enter slot
+        action['move1'] = 0 # Move peg 1
+        action['move2'] = 0 # Move peg 2
+        action['move3'] = 0 # Move peg 3
+        action['move4'] = 0 # Move peg 4
 
-        # 2 - Move peg
-        # 3 - Move peg to goal
+
+        # Move peg to enter slot
+        if self.pegs_in_game == 0 and dice == 6:
+            action['enter'] += 90
+            print ("RULE: No pegs in game")
+
+        # Move peg to goal
+        for id in range(0,4):
+             = self.peg[id] + dice
+            if target_slot in self.slots_goal and self.slots[target_slot] == None and:
+                action["move%s" % id] += 100
+                print ("RULE: Peg %s can move to goal" % id)
+
+        # Move peg
         print("Actions: %s" % action)
 
 
