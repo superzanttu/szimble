@@ -121,7 +121,10 @@ class Player():
         dice = random.randrange(1,7)
         print("Dice: %s " % dice)
 
+        action = {}
         # 1 - Move peg to enter slot
+        if self.pegs_in_game == 0 and dice == 6:
+            action()
 
         # 2 - Move peg
         # 3 - Move peg to goal
