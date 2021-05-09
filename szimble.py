@@ -159,11 +159,11 @@ class Player():
         self.slot_enter = 4
         self.slot_enter_enemy = [11,18,25]
         self.slots_goal = [32,33,34,35]
+        self.slots =  [None for x in range(0,35)]
 
     def move_peg_to_start(self,id):
         print("Move player %s peg %s to start" % (self.color, id))
         for i in self.slots_start:
-            print (i)
             if self.slots_start[i] == None:
                 self.slots_start[i] = id
                 print("...peg moved to slot %s" % i)
