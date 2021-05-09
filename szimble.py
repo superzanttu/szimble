@@ -197,7 +197,7 @@ def main():
     player.move_peg_to_start(3)
 
 
-    while True
+    while True:
         player.status()
         a = input()
 
