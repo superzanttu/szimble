@@ -163,11 +163,17 @@ class Player():
 
     def move_peg_to_start(self,id):
         print("Move player %s peg %s to start" % (self.name, id))
+
+        # Clear current location
+        self.slots[self.pegs[id]] = None
+
+        # Move peg to empty start slot
         for i in self.slots_start:
             if self.slots[i] == None:
                 self.slots[i] = id
                 print("...peg moved to slot %s" % i)
                 return
+
 
         pass
 
