@@ -175,9 +175,6 @@ class Player():
                 print("...peg moved to slot %s" % i)
                 return
 
-
-        pass
-
     def status(self):
         print ("Player: %s" % self.name)
         print ("...spegs at: %s"  % (self.pegs))
