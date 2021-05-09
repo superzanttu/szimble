@@ -122,15 +122,15 @@ class Player():
         print("Dice: %s " % dice)
 
         action = {}
-        action['enter0'] = 0 # Move peg 1 to enter slot
-        action['enter1'] = 0 # Move peg 1 to enter slot
-        action['enter2'] = 0 # Move peg 1 to enter slot
-        action['enter3'] = 0 # Move peg 1 to enter slot
-        action['move0'] = 0 # Move peg 1
-        action['move1'] = 0 # Move peg 2
-        action['move2'] = 0 # Move peg 3
-        action['move3'] = 0 # Move peg 4
-        action['none'] = 1 # Don't know what to do
+        action['E0'] = 0 # Move peg 1 to enter slot
+        action['E1'] = 0 # Move peg 1 to enter slot
+        action['E2'] = 0 # Move peg 1 to enter slot
+        action['E3'] = 0 # Move peg 1 to enter slot
+        action['M0'] = 0 # Move peg 1
+        action['M1'] = 0 # Move peg 2
+        action['M2'] = 0 # Move peg 3s
+        action['M3'] = 0 # Move peg 4
+        action['ERROR'] = 1 # Don't know what to do
 
 
 
@@ -138,21 +138,21 @@ class Player():
         for id in range(0,4):
             target_slot = self.slot_enter
             if self.pegs_in_game == 0 and dice == 6 and self.slots[target_slot] == None:
-                action["enter%s" % id] += 90
+                action["E%s" % id] += 90
                 print ("PEG %s RULE: No pegs in game" % id)
 
         # Move peg X to goal
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if target_slot in self.slots_goal and self.slots[target_slot] == None:
-                action["move%s" % id] += 100
+                action["M%s" % id] += 100
                 print ("PEG %s RULE: Peg %s can move to goal" % (id,id))
 
         # Move peg X
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and self.slots[target_slot] == None:
-                action["move%s" % id] += 1
+                action["M%s" % id] += 1
                 print ("PEG %S RULE: Move peg %s" % (id,id))
 
         print("Rule outcome: %s" % action)
