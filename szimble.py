@@ -128,6 +128,7 @@ class Player():
 
         # 2 - Move peg
         # 3 - Move peg to goal
+        print("Actions: %s" % action)
 
 
 def main():
