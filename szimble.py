@@ -159,7 +159,7 @@ class Player():
         self.slot_enter_enemy = [11,18,25]
         self.slots_goal = [32,33,34,35]
 
-    def move_peg_to_startself,id):
+    def move_peg_to_start(self,id):
         pass
 
 def main():
