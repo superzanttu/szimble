@@ -67,6 +67,7 @@ class Player():
         self.name = player_name
         # Slot index 0..35
         self.pegs = [None, None, None, None]
+        self.pegs_in_game = 0
         self.slots_start = [0,1,2,3]
         self.slot_enter = 4
         self.slot_enter_enemy = [11,18,25]
@@ -87,6 +88,10 @@ class Player():
                 self.pegs[id] = i
                 print("...peg moved to slot %s" % i)
                 return
+
+        # Pegs in the Game
+        if self.pegs_in_game > 0:
+            self.pegs_in_game += 1
 
     def status(self):
         print ("Player: %s" % self.name)
