@@ -152,10 +152,15 @@ class Player():
 
     def __init__(self, player_color):
         self.color = player_color
+        # Slot index 0..35
+        self.pegs = [None, None, None, None]
+        self.slots_start = [0,1,2,3]
+        self.slot_enter = 4
+        self.slot_enter_enemy = [11,18,25]
+        self.slots_goal = [32,33,34,35]
 
-
-
-
+    def move_peg_to_startself,id):
+        pass
 
 def main():
 
