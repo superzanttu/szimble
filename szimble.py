@@ -135,9 +135,11 @@ class Player():
 
 
         # Move peg to enter slot
-        if self.pegs_in_game == 0 and dice == 6:
-            action['enter'] += 90
-            print ("RULE: No pegs in game")
+        for id in range(0,4):
+            target_slot = self.slot_enter
+            if self.pegs_in_game == 0 and dice == 6 and self.slots[target_slot] == None:
+                action['enter'] += 90
+                print ("RULE: No pegs in game")
 
         # Move peg X to goal
         for id in range(0,4):
