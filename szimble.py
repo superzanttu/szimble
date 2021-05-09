@@ -142,7 +142,19 @@ class Player():
                 print ("RULE: Peg %s can move to goal" % id)
 
         # Move peg
-        print("Actions: %s" % action)
+        print("Rule outcome: %s" % action)
+
+        # Select best rule based on value
+        selected_action_max = 0
+        selected_action_name = ""
+        for k in action.keys():
+            if action[k] > action_max:
+                selected_action_max = action[k]
+                selected_action_name = k
+
+        print("Selected action: %s" % selected_action_name)
+
+
 
 
 def main():
