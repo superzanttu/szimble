@@ -118,7 +118,7 @@ class Player():
         print (self.slots)
 
     def play(self):
-        dice = random.randrange(1,6)
+        dice = random.randrange(1,7)
         print("Dice: %s " % dice)
 
         # 1 - Move peg to enter slot
