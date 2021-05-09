@@ -164,7 +164,7 @@ class Player():
     def move_peg_to_start(self,id):
         print("Move player %s peg %s to start" % (self.name, id))
         for i in self.slots_start:
-            if self.slots_start[i] == None:
+            if self.slots[i] == None:
                 self.slots[i] = id
                 print("...peg moved to slot %s" % i)
 
