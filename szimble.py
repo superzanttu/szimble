@@ -162,6 +162,9 @@ class Player():
 
     def move_peg_to_start(self,id):
         print("Move player %s peg %s to start" % (self.color, id))
+        for i in range(0,3):
+            print (i)
+
         pass
 
 def main():
