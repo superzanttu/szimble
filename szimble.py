@@ -185,7 +185,7 @@ def main():
 
     player = Player("Red")
     player.move_peg_to_start(3)
-    player.status
+    player.status()
 
 
     log.info("DONE")
