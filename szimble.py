@@ -148,7 +148,7 @@ class Player():
         selected_action_max = 0
         selected_action_name = ""
         for k in action.keys():
-            if action[k] > action_max:
+            if action[k] > selected_action_max:
                 selected_action_max = action[k]
                 selected_action_name = k
 
