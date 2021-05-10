@@ -154,9 +154,7 @@ class Player():
 
 
     def status(self):
-        print ("Player: %s" % self.name)
-        print ("...pegs at: %s"  % (self.pegs))
-        print ("...pegs in game: %s"  % (self.pegs_in_game))
+        print ("Player %s have %s pegs in game at %s" % (self.name,self.pegs_in_game,self.pegs)
         print (self.slots)
 
     def play(self):
