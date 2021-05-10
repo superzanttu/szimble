@@ -159,7 +159,7 @@ class Player():
             if self.slots[i] == None:
                 txt += "."
             else:
-                txt += i
+                txt += str(i)
         print("Start: %s" % txt)
 
         txt=""
@@ -167,7 +167,7 @@ class Player():
             if self.slots[i] == None:
                 txt += "."
             else:
-                txt += i
+                txt += str(i)
         print("Goal: %s" % txt)
 
         txt=""
@@ -175,7 +175,7 @@ class Player():
             if self.slots[i] == None:
                 txt += "."
             else:
-                txt += i
+                txt += str(i)
         print("Slots: %s" % txt)
 
     def play(self):
