@@ -182,17 +182,17 @@ class Player():
         for id in range(0,4):
             target_slot = self.slot_enter
             if dice == 6 and self.slots[target_slot] == None and self.pegs[id] < self.slot_enter:
-                score = rule_score["E%s" % id] += 90
+                rule_score["E%s" % id] += 90
                 rule_target_slot["E%s" % id] = target_slot
-                print ("PEG %s RULE: Enter game with score %s" % id)
+                print ("RULE: Peg %s enter game with score %s" % (id, rule_score["E%s" % id]))
 
         # Move peg X to goal
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if target_slot >= self.slot_goal1 and target_slot <= self.slot_goal2 and self.slots[target_slot] == None:
-                rule_score["G%s" % id] += 100 + self.pegs[id] # Peg closest to the goal have higher score
+                rule_score["E%s" % id] += 100 + self.pegs[id] # Peg closest to the goal have higher score
                 rule_target_slot["G%s" % id] = target_slot
-                print ("PEG %s RULE: Movr peg %s to goal" % (id,id))
+                print ("RULE: Move peg %s to goal (%s) with score %s" % (id,target_slot,rule_score["E%s" % id]))
 
         # Move peg X
         for id in range(0,4):
@@ -200,7 +200,7 @@ class Player():
             if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1 and self.slots[target_slot] == None :
                 rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
                 rule_target_slot["M%s" % id] = target_slot
-                print ("PEG %s RULE: Move peg %s" % (id,id))
+                print ("RULE: Move peg %s with score %s to %s" % (id, rule_score["M%s" % id],target_slot))
 
         print("Rule scores: %s" % rule_score)
         print("Rule target slots: %s" % rule_target_slot)
