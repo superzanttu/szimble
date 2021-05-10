@@ -258,7 +258,7 @@ class Player():
         elif action == "M": # Move peg to enter slot
             self.move_peg_to_slot(peg,target_slot )
         elif action == "G": # Move peg to goal slot
-            self.move_peg_to_slot(peg,target_slot )
+            self.move_peg_to_goal(peg,target_slot )
 
 
 
