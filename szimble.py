@@ -168,7 +168,7 @@ class Player():
                 txt += "."
             else:
                 txt += i
-        print("Goal: %s" % txt
+        print("Goal: %s" % txt)
 
         txt=""
         for i in range(4,33):
