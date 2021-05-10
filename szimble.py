@@ -176,7 +176,7 @@ class Player():
 
 
         for id in range(0,4):
-            print ("Checking peg %s:" % id)
+            print ("Checking peg %s:" % id),
             target_slot = self.pegs[id] + dice
 
             # Move peg to enter slot
