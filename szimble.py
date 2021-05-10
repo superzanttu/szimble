@@ -207,8 +207,9 @@ class Player():
                 rule_target_slot["M%s" % id] = target_slot
                 print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]))
 
-            print("Rule target slots: %s" % rule_target_slot)
-            print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot[0],rule_target_slot[1],rule_target_slot[2],rule_target_slot[3]))
+
+            print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot["E%s" % id],rule_target_slot["G%s" % id],rule_target_slot["M%s" % id]))
+            
 
 
 
