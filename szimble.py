@@ -183,33 +183,33 @@ class Player():
             if dice == 6 and self.slots[target_slot] == None and self.pegs[id] < self.slot_enter:
                 rule_score["E%s" % id] += 90
                 rule_target_slot["E%s" % id] = self.slot_enter
-                print ("...enter game with score %s" % (rule_score["E%s" % id]))
+                print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
 
             # Move peg X to goal
             if target_slot >= self.slot_goal1 and target_slot <= self.slot_goal2 and self.slots[target_slot] == None:
                 rule_score["G%s" % id] += 100 + self.pegs[id] # Peg closest to the goal have higher score
                 rule_target_slot["G%s" % id] = target_slot
-                print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]))
+                print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]), end=" ")
 
             # Move peg X
             if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1 and self.slots[target_slot] == None :
                 rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
 
                 if self.pegs[id] == self.slot_enter: # Priorize peg in enter slot
-                    print("...is at enter slot")
+                    print("...is at enter slot", end=" ")
                     rule_score["M%s" % id] += 50
 
                 if self.pegs[id] in self.slot_enter_enemy: # Priorize peg in enemy enter slot
-                    print("...is at enemy enter slot")
+                    print("...is at enemy enter slot", end=" ")
                     rule_score["M%s" % id] += 60
 
 
                 rule_target_slot["M%s" % id] = target_slot
-                print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]))
+                print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]), end=" ")
 
 
             print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot["E%s" % id],rule_target_slot["G%s" % id],rule_target_slot["M%s" % id]))
-            
+
 
 
 
