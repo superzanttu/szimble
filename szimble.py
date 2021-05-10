@@ -194,8 +194,16 @@ class Player():
             # Move peg X
             if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1 and self.slots[target_slot] == None :
                 rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
-                if self.pegs[id] == self.slot_enter or self.pegs[id] in self.slot_enter_enemy: # Priorize peg in enter slot
+                
+                if self.pegs[id] == self.slot_enter: # Priorize peg in enter slot
+                    print("...is at enter slot")
                     rule_score["M%s" % id] += 50
+
+                if self.pegs[id] in self.slot_enter_enemy: # Priorize peg in enemy enter slot
+                    print("...is at enemy enter slot")
+                    rule_score["M%s" % id] += 60
+
+
                 rule_target_slot["M%s" % id] = target_slot
                 print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]))
 
