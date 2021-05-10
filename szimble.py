@@ -110,8 +110,6 @@ class Player():
             exit(1)
 
 
-        print("FIXME: move if enter slot is occupied")
-
         # Pegs in the Game
         self.pegs_in_game += 1
 
@@ -197,6 +195,8 @@ class Player():
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1 and self.slots[target_slot] == None :
                 rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
+                if self.pegs[id] = self.slot_enter: # Priorize peg in enter slot
+                    rule_score["M%s" % id] += 50
                 rule_target_slot["M%s" % id] = target_slot
                 print ("RULE: Move peg %s with score %s to %s" % (id, rule_score["M%s" % id],target_slot))
 
