@@ -176,7 +176,7 @@ class Player():
                 txt += "."
             else:
                 txt += str(i)
-        print("Slots: %s" % txt)
+        print("Slots : %s" % txt)
 
     def play(self):
         dice = random.randrange(1,7)
