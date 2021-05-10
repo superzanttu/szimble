@@ -153,7 +153,30 @@ class Player():
 
     def status(self):
         print ("Player %s have %s pegs in game at %s" % (self.name,self.pegs_in_game,self.pegs))
-        print (self.slots)
+
+        txt=""
+        for i in range(0,4):
+            if self.slots[i] == None:
+                txt += "."
+            else:
+                txt += i
+        print("Start: %s" % txt)
+
+        txt=""
+        for i in range(32,36):
+            if self.slots[i] == None:
+                txt += "."
+            else:
+                txt += i
+        print("Goal: %s" % txt
+
+        txt=""
+        for i in range(4,33):
+            if self.slots[i] == None:
+                txt += "."
+            else:
+                txt += i
+        print("Slots: %s" % txt)
 
     def play(self):
         dice = random.randrange(1,7)
