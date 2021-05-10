@@ -198,7 +198,7 @@ class Player():
         for id in range(0,4):
             target_slot = self.pegs[id] + dice
             if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1 and self.slots[target_slot] == None :
-                rule_score["M%s" % id] += 1
+                rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
                 rule_target_slot["M%s" % id] = target_slot
                 print ("PEG %s RULE: Move peg %s" % (id,id))
 
