@@ -171,7 +171,7 @@ class Player():
         print("Goal  : %s" % txt)
 
         txt=""
-        for i in range(4,33):
+        for i in range(4,32):
             if self.slots[i] == None:
                 txt += "."
             else:
