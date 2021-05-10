@@ -203,7 +203,7 @@ class Player():
             target_slot = self.pegs[id] + dice
 
             # Move peg to enter slot
-            if dice == 6 and self.slots[sel.slot_enter] == None and self.pegs[id] < self.slot_enter:
+            if dice == 6 and self.slots[self.slot_enter] == None and self.pegs[id] < self.slot_enter:
                 rule_score["E%s" % id] += 90
                 rule_target_slot["E%s" % id] = self.slot_enter
                 print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
