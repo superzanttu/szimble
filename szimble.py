@@ -211,7 +211,7 @@ class Player():
                 selected_rule_name = k
                 target_slot = rule_target_slot[k]
 
-        print("Selected rule: %s" % selected_rule_name)
+        # print("Selected rule: %s" % selected_rule_name)
 
         action = selected_rule_name[:1]
         peg = int(selected_rule_name[1:])
