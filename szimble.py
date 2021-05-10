@@ -189,12 +189,12 @@ class Player():
             if target_slot >= self.slot_goal1 and target_slot <= self.slot_goal2 and self.slots[target_slot] == None:
                 rule_score["G%s" % id] += 100 + self.pegs[id] # Peg closest to the goal have higher score
                 rule_target_slot["G%s" % id] = target_slot
-                print ("...move to goal slot %s with score %s" % (id,target_slot,rule_score["G%s" % id]))
+                print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]))
 
             # Move peg X
             if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1 and self.slots[target_slot] == None :
                 rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
-                
+
                 if self.pegs[id] == self.slot_enter: # Priorize peg in enter slot
                     print("...is at enter slot")
                     rule_score["M%s" % id] += 50
