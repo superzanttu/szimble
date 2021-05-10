@@ -67,7 +67,6 @@ class Player():
         self.name = player_name
         # Slot index 0..35
         self.pegs = [None, None, None, None]
-        self.pegs_in_game = 0
         self.slots_start = [0,1,2,3]
         self.slot_enter = 4
         self.slot_enter_enemy = [11,18,25]
@@ -90,10 +89,6 @@ class Player():
                 print("...peg moved to slot %s" % i)
                 return
 
-        # Pegs in the Game
-        if self.pegs_in_game > 0:
-            self.pegs_in_game -= 1
-
     def move_peg_to_game(self,id):
         print("Move player %s peg %s to game" % (self.name, id))
 
@@ -110,9 +105,6 @@ class Player():
             exit(1)
 
 
-        # Pegs in the Game
-        self.pegs_in_game += 1
-
     def move_peg_to_goal(self,id,target_slot):
         print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
 
@@ -123,16 +115,10 @@ class Player():
         # Move peg to new slot
         if self.slots[target_slot] == None:
             self.slots[target_slot] = id
-
+            self.pegs[id]= target_slot
         else:
             print("ERROR: Target slot occupied")
             exit(1)
-
-        # Pegs in the Game
-        self.pegs_in_game -= 1
-        self.pegs[id]= None
-
-        print("FIXME: don't move if peg is in goal allready")
 
 
     def move_peg_to_slot(self,id,target_slot):
@@ -152,7 +138,7 @@ class Player():
 
 
     def status(self):
-        print ("Player %s have %s pegs in game at %s" % (self.name,self.pegs_in_game,self.pegs))
+        print ("Player %s have pegs in game at %s" % (self.name,self.pegs))
 
         txt=""
         for i in range(0,4):
