@@ -160,7 +160,7 @@ class Player():
                 txt += "."
             else:
                 txt += str(i)
-        print("Start: %s" % txt)
+        print("Start : %s" % txt)
 
         txt=""
         for i in range(32,36):
@@ -168,7 +168,7 @@ class Player():
                 txt += "."
             else:
                 txt += str(i)
-        print("Goal: %s" % txt)
+        print("Goal  : %s" % txt)
 
         txt=""
         for i in range(4,33):
