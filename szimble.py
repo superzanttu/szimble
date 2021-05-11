@@ -93,23 +93,23 @@ class Player():
         print ("Player %s enemy pegs locations: %s %s" % (self.id, player_id, pegs_location))
 
         for i in range(self.slot_enter, self.slot_goal1):
-            print ("HIHI",i,self.slots_owner_id[i] , player_id)
+            #print ("HIHI",i,self.slots_owner_id[i] , player_id)
             if self.slots_owner_id[i] == player_id:
-                print ("   HI")
+                #print ("   HI")
 
                 self.slots[i] = None
                 self.slots_owner_id[i] = None
 
         for p in range (0,4):
             if pegs_location[p] and pegs_location[p] >= self.slot_enter and pegs_location[p] < self.slot_goal1 :
-                print ("Set peg owner id for slot",pegs_location[p])
+                #print ("Set peg owner id for slot",pegs_location[p])
                 s =  pegs_location[p] + player_id * 7
                 s = (s-4) % 28 + 4
 
                 self.slots[s] = player_id*10 + p
                 self.slots_owner_id[s] = player_id
 
-                print ("id %s enemy slot %s --> %s"  % (player_id, pegs_location[p],s))
+                #print ("id %s enemy slot %s --> %s"  % (player_id, pegs_location[p],s))
 
                 #if s == pegs_location[0]:
                 #
