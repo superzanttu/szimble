@@ -249,7 +249,9 @@ class Player():
 
         for id in range(0,4):
             #print ("Checking peg %s:" % id, end=" ")
+
             target_slot = self.pegs_location[id] + dice
+            print (target_slot)
 
             # Move peg to enter slot
             if dice == 6 \
