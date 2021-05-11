@@ -383,10 +383,10 @@ def main():
         print ("\n-------------------------")
         for current_player in players:
             current_player.play()
-            current_player.status()
             for other_player in players:
                 if other_player!=current_player:
                     other_player.set_enemy_pegs_location(current_player.id, current_player.pegs_location)
+            current_player.status()
 
             if current_player.status_winner:
                 game_is_running = False
