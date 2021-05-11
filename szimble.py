@@ -102,7 +102,7 @@ class Player():
 
         for p in range (0,4):
             if pegs_location[p] and pegs_location[p] >= self.slot_enter and pegs_location[p] < self.slot_goal1 :
-                print ("pegs_location[p]:",pegs_location[p])
+                print ("Set peg owner id for slot",pegs_location[p])
                 s =  pegs_location[p] + player_id * 7
                 s = (s-4) % 28 + 4
 
