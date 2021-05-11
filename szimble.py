@@ -368,8 +368,7 @@ def main():
             p.status()
             for o in players:
                 if o!=p:
-
-            p_count += 1
+                    print("FIXME")
 
             if p.status_winner:
                 game_is_running = False
