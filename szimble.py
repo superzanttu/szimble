@@ -68,6 +68,8 @@ class Player():
         # Slot index 0..35
         self.turn_counter = 0
         self.pegs_location = [0, 1, 2, 3] # All pegs in start
+        self.enemy_pegs_location = [None, None, None, None]
+        self.enemy_pegs_count = 0
         self.pegs_in_start = 4
         self.pegs_in_game = 0
         self.pegs_in_goal = 0
@@ -83,6 +85,16 @@ class Player():
         self.slots[1] = 1
         self.slots[2] = 2
         self.slots[3] = 3
+
+    def set_enemy_pegs_location(self, pegs_count, pegs_location):
+        for i in self.slots:
+            if i == 9:
+                i = None
+            if i in pegs_location
+                i = 9
+
+        self.enemy_pegs_location = location
+        self.enemy_pegs_count = count
 
     def move_peg_to_start(self,id):
         #print("Move player %s peg %s to start" % (self.name, id))
