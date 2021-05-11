@@ -372,14 +372,14 @@ def main():
     game_is_running = True
     while game_is_running:
         print ("\n-------------------------")
-        for p in players:
-            p.play()
-            p.status()
-            for op in players:
-                if op!=p:
-                    op.set_enemy_pegs_location(op.name, op.pegs_location)
+        for current_player in players:
+            current_player.play()
+            current_player.status()
+            for other_player in players:
+                if other_player!=current_player:
+                    other_player.set_enemy_pegs_location(other_player.id, current_player.pegs_location)
 
-            if p.status_winner:
+            if current_player.status_winner:
                 game_is_running = False
 
     print("End of the game")
