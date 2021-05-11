@@ -182,9 +182,9 @@ class Player():
         start=""
         for i in range(0,4):
             if self.slots[i] == None:
-                start += ".. "
+                start += "  "
             else:
-                start += "{:.>2} ".format(self.slots[i])
+                start += "{: >1} ".format(self.slots[i])
         #print("Start : %s" % start)
 
         goal=""
