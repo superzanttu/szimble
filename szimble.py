@@ -89,16 +89,17 @@ class Player():
         print (id, pegs_location)
 
         for i in range(self.slot_enter, self.slot_goal1):
-            if self.slots[i] == 9:
+            if self.slots[i] >9 :
                 self.slots[i] = None
 
-            for p in range (0,4):
-                s =  pegs_location[p]+ 7 * i
 
-                print ("id %s slot %s --> %s"  % (id, pegs_location[p],s))
+        for p in range (0,4):
+            s =  pegs_location[p]+ 7 * i
 
-                #if s == pegs_location[0]:
-                #    self.slots[i] = id*10 + 0
+            print ("id %s slot %s --> %s"  % (id, pegs_location[p],s))
+
+            #if s == pegs_location[0]:
+            #    self.slots[i] = id*10 + 0
 
         #print (self.slots)
         #self.enemy_pegs_location =
