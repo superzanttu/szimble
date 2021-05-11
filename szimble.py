@@ -226,7 +226,7 @@ class Player():
                 slots += "{:.>2} ".format(self.slots[i])
         #print("Slots : %s" % slots)
 
-        print ("%s %s %s %s" % (self.turn_counter,start, slots, goal ))
+        print ("%s %s %s %s\n" % (self.turn_counter,start, slots, goal ))
 
     def play(self):
         dice = random.randrange(1,7)
