@@ -94,7 +94,7 @@ class Player():
 
 
         for p in range (0,4):
-            if p != None
+            if p != None:
                 s =  pegs_location[p] + id * 7
 
 
