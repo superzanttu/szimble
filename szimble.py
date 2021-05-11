@@ -192,7 +192,7 @@ class Player():
             if self.slots[i] == None:
                 goal += ". "
             else:
-                goal += {:.>1} ".format(self.slots[i])
+                goal += "{:.>1} ".format(self.slots[i])
         #print("Goal  : %s" % goal)
 
         slots=""
