@@ -96,6 +96,8 @@ class Player():
         for p in range (0,4):
             s =  pegs_location[p] + id * 7
 
+
+
             print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
 
             #if s == pegs_location[0]:
@@ -296,9 +298,9 @@ def main():
     log.info("Game is runnning.")
 
     player = Player("Red")
-    player.set_enemy_pegs_location(1,[4,11,23,29])
-    #player.set_enemy_pegs_location(2,[4,11,0,1])
-    #player.set_enemy_pegs_location(3,[4,0,1,2])
+    player.set_enemy_pegs_location(1,[4,None,None,None])
+    player.set_enemy_pegs_location(2,[4,None,None,None])
+    player.set_enemy_pegs_location(3,[4,None,None,None])
 
 
     player.status()
