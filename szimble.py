@@ -87,7 +87,7 @@ class Player():
         self.slots[3] = 3
 
     def set_enemy_pegs_location(self, id,pegs_location):
-        print (id, pegs_location)
+        #print (id, pegs_location)
 
         for i in range(self.slot_enter, self.slot_goal1):
             if self.slots[i]!=None:
@@ -104,7 +104,7 @@ class Player():
 
                 self.slots[s] = id*10 + p
 
-                print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
+                #print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
 
                 #if s == pegs_location[0]:
                 #
