@@ -278,8 +278,9 @@ def main():
     while player.pegs_in_goal<4:
         player.play()
         player.status()
-        #user_input = input()
+        user_input = input()
 
+    print("End of the game")
     player.status()
 
     log.info("DONE")
