@@ -91,14 +91,17 @@ class Player():
         for i in range(self.slot_enter, self.slot_goal1):
             if self.slots[i] == 9:
                 self.slots[i] = None
-            if i == pegs_location[0]:
-                s =
+
+
+            s = i + 7 * i
+
+            if s == pegs_location[0]:
                 self.slots[i] = id*10 + 0
-            elif i == pegs_location[1]:
+            elif s == pegs_location[1]:
                 self.slots[i] = id*10 + 1
-            elif i == pegs_location[2]:
+            elif s == pegs_location[2]:
                 self.slots[i] = id*10 + 2
-            elif i == pegs_location[3]:
+            elif s == pegs_location[3]:
                 self.slots[i] = id*10 + 3
 
         #print (self.slots)
