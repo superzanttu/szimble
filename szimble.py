@@ -247,7 +247,7 @@ class Player():
         #print("Slots : %s" % slots)
 
         print ("P%s T%s D%s %s %s %s" % (self.id, str(self.turn_counter).rjust(4,"0"),self.dice, start, slots, goal ))
-        print ("          %s" % slots_owner_id)
+        print ("                %s" % slots_owner_id)
 
     def play(self):
         self.dice = random.randrange(1,7)
