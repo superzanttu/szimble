@@ -92,6 +92,7 @@ class Player():
             if self.slots[i] == 9:
                 self.slots[i] = None
             if i == pegs_location[0]:
+                s =
                 self.slots[i] = id*10 + 0
             elif i == pegs_location[1]:
                 self.slots[i] = id*10 + 1
@@ -295,9 +296,9 @@ def main():
     log.info("Game is runnning.")
 
     player = Player("Red")
-    player.set_enemy_pegs_location(1,[7,11,23,29])
-    player.set_enemy_pegs_location(2,[7,11,0,1])
-    player.set_enemy_pegs_location(3,[7,0,1,2])
+    player.set_enemy_pegs_location(1,[4,11,23,29])
+    player.set_enemy_pegs_location(2,[4,11,0,1])
+    player.set_enemy_pegs_location(3,[4,0,1,2])
 
 
     player.status()
