@@ -184,7 +184,7 @@ class Player():
             if self.slots[i] == None:
                 start += ".._"
             else:
-                start += "{:.^3}".format(self.slots[i])
+                start += "{:.^3} ".format(self.slots[i])
         #print("Start : %s" % start)
 
         goal=""
