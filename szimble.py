@@ -351,7 +351,7 @@ def main():
         p.set_enemy_pegs_location(2,[0,1,2,3])
         p.set_enemy_pegs_location(3,[0,1,2,3])
 
-    for p in player:
+    for p in players:
         p.status()
 
     user_input=""
