@@ -344,11 +344,12 @@ def main():
 
     log.info("Game is runnning.")
 
-    player = Player("Red")
-    player.set_enemy_pegs_location(1,[4,31,None,None])
-    player.set_enemy_pegs_location(2,[4,31,None,None])
-    player.set_enemy_pegs_location(3,[4,31,None,None])
+    players = [Player("Red"),Player("Yellow")]
 
+    for p in players:
+        p.set_enemy_pegs_location(1,[0,1,2,3])
+        p.set_enemy_pegs_location(2,[0,1,2,3])
+        p.set_enemy_pegs_location(3,[0,1,2,3])
 
     player.status()
 
