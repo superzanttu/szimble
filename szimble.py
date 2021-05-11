@@ -90,7 +90,7 @@ class Player():
         for i in self.slots:
             if i == 9:
                 i = None
-            if i in pegs_location
+            if i in pegs_location:
                 i = 9
 
         self.enemy_pegs_location = location
