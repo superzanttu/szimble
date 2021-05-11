@@ -288,6 +288,10 @@ class Player():
                 if self.slots[target_slot] == None :
                     rule_score["M%s" % id] += self.pegs_location[id] # Peg closest to the goal have higher score
 
+                    if target_slot in self.slot_enter_enemy:
+                        print("Peg %s target is enemy enter slot  --> -10" %  id)
+                        rule_score["M%s" % id] -= 10
+
                     if self.pegs_location[id] == self.slot_enter: # Priorize peg in enter slot
                         print("Peg %s is in enter slot --> +50" %  id)
                         rule_score["M%s" % id] += 50
