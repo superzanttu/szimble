@@ -89,7 +89,9 @@ class Player():
         print (id, pegs_location)
 
         for i in range(self.slot_enter, self.slot_goal1):
-            if self.slots[i]!=None and self.slots[i] % id*10 > 0:
+            if self.slots[i]!=None:
+                p = self.slots[i] % 10
+                print (p)
                 self.slots[i] = None
 
 
