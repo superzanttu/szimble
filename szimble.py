@@ -63,7 +63,7 @@ log = logging.getLogger()
 class Player():
 
     def __init__(self, player_id):
-        #print("Init player: %s" % player_name)
+        print("Init player: %s" % player_id)
         self.id = player_id
         # Slot index 0..35
         self.turn_counter = 0
