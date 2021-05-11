@@ -198,9 +198,9 @@ class Player():
         slots=""
         for i in range(4,32):
             if self.slots[i] == None:
-                slots += "."
+                slots += ".. "
             else:
-                slots += str(self.slots[i])
+                slots += "{:..>2} ".format(self.slots[i])
         #print("Slots : %s" % slots)
 
         print ("%s %s %s %s" % (self.turn_counter,start, slots, goal ))
