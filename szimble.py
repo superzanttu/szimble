@@ -367,7 +367,7 @@ def main():
 
     log.info("Game is runnning.")
 
-    players = [Player(0),Player(1),[Player(2),Player(3)]]
+    players = [Player(0),Player(1),Player(2),Player(3)]
 
     print ("Players...")
     for p in players:
