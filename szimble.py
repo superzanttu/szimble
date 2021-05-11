@@ -216,7 +216,7 @@ class Player():
                 print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]), end=" ")
 
             # Move peg X
-            if self.pegs[id] >= self.slot_enter and target_slot < self.slot_goal1:
+            if self.pegs_location[id] >= self.slot_enter and target_slot < self.slot_goal1:
                 if self.slots[target_slot] == None :
                     rule_score["M%s" % id] += self.pegs[id] # Peg closest to the goal have higher score
 
