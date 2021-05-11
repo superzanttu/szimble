@@ -235,14 +235,19 @@ class Player():
         #print("Goal  : %s" % goal)
 
         slots=""
+        slots_owner_id=""
         for i in range(4,32):
             if self.slots[i] == None:
                 slots += ".. "
+                slots_owner_id += ".. "
             else:
                 slots += "{:.>2} ".format(self.slots[i])
+                slots_owner_id += "{:.>2} ".format(self.slots_owner_id[i])
+
         #print("Slots : %s" % slots)
 
         print ("P%s T%s D%s %s %s %s" % (self.id, str(self.turn_counter).rjust(4,"0"),self.dice, start, slots, goal ))
+        print ("          %s" % slots_owner_id)
 
     def play(self):
         self.dice = random.randrange(1,7)
