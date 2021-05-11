@@ -371,7 +371,6 @@ def main():
 
     print ("Players...")
     for p in players:
-        print (p)
         p.set_enemy_pegs_location(0,[0,1,2,3])
         p.set_enemy_pegs_location(1,[0,1,2,3])
         p.set_enemy_pegs_location(2,[0,1,2,3])
