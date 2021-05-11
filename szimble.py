@@ -259,7 +259,7 @@ class Player():
                 and self.slots[self.slot_enter] == None \
                 and self.pegs_location[id] < self.slot_enter:
 
-                rule_score["E%s" % id] += 80
+                rule_score["E%s" % id] += 80 + id
                 rule_target_slot["E%s" % id] = self.slot_enter
                 print ("Peg %s enter game [%s]" % (id,rule_score["E%s" % id]))
 
