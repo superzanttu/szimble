@@ -79,6 +79,7 @@ class Player():
         self.slot_goal1 = 32
         self.slot_goal2 = 35
         self.slots =  [None for x in range(0,36)]
+        self.status_winner = False
 
         # All pegs in start
         self.slots[0] = 0
@@ -167,6 +168,9 @@ class Player():
         else:
             print("ERROR: Target slot occupied")
             exit(1)
+
+        if self.pegs_in_goal = 4: # We are a winner!
+            self.status_winner = True
 
 
     def move_peg_to_slot(self,id,target_slot):
