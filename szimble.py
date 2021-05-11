@@ -97,14 +97,14 @@ class Player():
 
                 print ("id %s slot %s --> %s"  % (id, pegs_location[p],s ))
 
-            if s == pegs_location[0]:
-                self.slots[i] = id*10 + 0
-            elif s == pegs_location[1]:
-                self.slots[i] = id*10 + 1
-            elif s == pegs_location[2]:
-                self.slots[i] = id*10 + 2
-            elif s == pegs_location[3]:
-                self.slots[i] = id*10 + 3
+                if s == pegs_location[0]:
+                    self.slots[i] = id*10 + 0
+                elif s == pegs_location[1]:
+                    self.slots[i] = id*10 + 1
+                elif s == pegs_location[2]:
+                    self.slots[i] = id*10 + 2
+                elif s == pegs_location[3]:
+                    self.slots[i] = id*10 + 3
 
         #print (self.slots)
         #self.enemy_pegs_location =
