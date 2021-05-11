@@ -63,7 +63,7 @@ log = logging.getLogger()
 class Player():
 
     def __init__(self, player_name):
-        print("Init player: %s" % player_name)
+        #print("Init player: %s" % player_name)
         self.name = player_name
         # Slot index 0..35
         self.turn_counter = 0
@@ -85,7 +85,7 @@ class Player():
         self.slots[3] = 3
 
     def move_peg_to_start(self,id):
-        print("Move player %s peg %s to start" % (self.name, id))
+        #print("Move player %s peg %s to start" % (self.name, id))
 
         self.pegs_in_start += 1
         self.pegs_in_game -= 1
@@ -103,7 +103,7 @@ class Player():
                 return
 
     def move_peg_to_game(self,id):
-        print("Move player %s peg %s to game" % (self.name, id))
+        #print("Move player %s peg %s to game" % (self.name, id))
 
         self.pegs_in_start -= 1
         self.pegs_in_game += 1
@@ -122,7 +122,7 @@ class Player():
 
 
     def move_peg_to_goal(self,id,target_slot):
-        print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
+        #print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
 
         self.pegs_in_goal += 1
         self.pegs_in_game -= 1
@@ -141,7 +141,7 @@ class Player():
 
 
     def move_peg_to_slot(self,id,target_slot):
-        print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
+        #print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
 
         # Clear current location
         if self.pegs_location[id] != None:
@@ -157,7 +157,7 @@ class Player():
 
 
     def status(self):
-        print ("Player %s have %s pegs in start %s in game and %s in goal at %s" % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs_location))
+        #print ("Player %s have %s pegs in start %s in game and %s in goal at %s" % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs_location))
 
         start=""
         for i in range(0,4):
