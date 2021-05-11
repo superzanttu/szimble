@@ -106,7 +106,7 @@ class Player():
                 self.slots[s] = player_id*10 + p
                 self.slots_owner_id[s] = player_id
 
-                print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
+                print ("id %s enemy slot %s --> %s"  % (player_id, pegs_location[p],s))
 
                 #if s == pegs_location[0]:
                 #
