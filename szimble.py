@@ -351,9 +351,10 @@ def main():
     players = [Player("Red"),Player("Yellow")]
 
     for p in players:
-        p.set_enemy_pegs_location(1,[0,1,2,3])
-        p.set_enemy_pegs_location(2,[0,1,2,3])
-        p.set_enemy_pegs_location(3,[0,1,2,3])
+        p.set_enemy_pegs_location("Red",[0,1,2,3])
+        p.set_enemy_pegs_location("Yellow",[0,1,2,3])
+        p.set_enemy_pegs_location("Green",[0,1,2,3])
+        p.set_enemy_pegs_location("Blue",[0,1,2,3])
 
     for p in players:
         p.status()
@@ -367,7 +368,7 @@ def main():
             p.status()
             for o in players:
                 if o!=p:
-                    print (p,o)
+
             p_count += 1
 
             if p.status_winner:
