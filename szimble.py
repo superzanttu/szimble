@@ -371,13 +371,12 @@ def main():
     game_is_running = True
     while game_is_running:
         print ("\n-------------------------")
-        p_count=0
         for p in players:
             p.play()
             p.status()
-            for o in players:
-                if o!=p:
-                    print("FIXME")
+            for op in players:
+                if op!=p:
+                    op.set_enemy_pegs_location(op.name, op.pegs_location)
 
             if p.status_winner:
                 game_is_running = False
