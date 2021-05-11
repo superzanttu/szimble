@@ -79,7 +79,7 @@ class Player():
         self.slot_goal1 = 32
         self.slot_goal2 = 35
         self.slots =  [None for x in range(0,36)]
-        self.slots_owner = [None for x in range(0,36)]
+        self.slots_owner_id = [None for x in range(0,36)]
         self.status_winner = False
         self.status_peg_eaten = None
 
@@ -102,8 +102,8 @@ class Player():
                 s =  pegs_location[p] + id * 7
                 s = (s-4) % 28 + 4
 
-                self.slots[s] = id*10 + p
-                self.slots_owner[s] = name
+                self.slots[s] = player_id*10 + p
+                self.slots_owner_id[s] = player_id
 
                 #print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
 
