@@ -100,7 +100,7 @@ class Player():
             elif i == pegs_location[3]:
                 self.slots[i] = id*10 + 3
 
-        print (self.slots)
+        #print (self.slots)
         #self.enemy_pegs_location =
 
 
