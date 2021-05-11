@@ -351,7 +351,8 @@ def main():
         p.set_enemy_pegs_location(2,[0,1,2,3])
         p.set_enemy_pegs_location(3,[0,1,2,3])
 
-    player.status()
+    for p in player:
+        p.status()
 
     user_input=""
     while player.pegs_in_goal<4:
