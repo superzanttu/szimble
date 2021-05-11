@@ -204,7 +204,7 @@ class Player():
             target_slot = self.pegs_location[id] + dice
 
             # Move peg to enter slot
-            if dice == 6 and self.slots[self.slot_enter] == None and self.pegs[id] < self.slot_enter:
+            if dice == 6 and self.slots[self.slot_enter] == None and self.pegs_location[id] < self.slot_enter:
                 rule_score["E%s" % id] += 90
                 rule_target_slot["E%s" % id] = self.slot_enter
                 print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
@@ -278,7 +278,7 @@ def main():
     while player.pegs_in_goal<4:
         player.play()
         player.status()
-        user_input = input()
+        #user_input = input()
 
     print("End of the game")
     player.status()
