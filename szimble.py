@@ -169,7 +169,7 @@ class Player():
         # Move peg to new slot
         if self.slots[target_slot] == None:
             self.slots[target_slot] = peg_id
-            self.slots_owner_id[target_slot] = self.name
+            self.slots_owner_id[target_slot] = self.id
             self.pegs_location[peg_id]= target_slot
         else:
             print("ERROR: Target slot occupied")
@@ -190,7 +190,7 @@ class Player():
         # Move peg to new slot
         if self.slots[target_slot] == None:
             self.slots[target_slot] = peg_id
-            self.slots_owner_id[target_slot] = self.name
+            self.slots_owner_id[target_slot] = self.id
             self.pegs_location[peg_id]= target_slot
         else:
             print("ERROR: Target slot occupied")
@@ -207,7 +207,7 @@ class Player():
         # Move peg over enemy
         if self.slots[target_slot] != None:
             self.slots[target_slot] = peg_id
-            self.slots_owner_id[target_slot] = self.name
+            self.slots_owner_id[target_slot] = self.id
             self.pegs_location[peg_id]= target_slot
         else:
             print("ERROR: Target slot occupied")
