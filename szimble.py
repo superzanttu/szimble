@@ -263,7 +263,9 @@ class Player():
                 #print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
 
             # Send enemy peg to start
-            if self.slots[target_slot] != None:
+            if target_slot < self.slot_goal1 and \
+                self.slots[target_slot] != None:
+
                 if self.slots[target_slot] > 9: # Enemy peg ids are over 9
                     rule_score["X%s" % id] += 90
                     rule_target_slot["X%s" % id] = target_slot
