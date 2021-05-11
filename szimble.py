@@ -92,7 +92,7 @@ class Player():
         #print (id, pegs_location)
 
         for i in range(self.slot_enter, self.slot_goal1):
-            if self.slots_owner[i] == name
+            if self.slots_owner[i] == name:
                 self.slots[i] = None
                 self.slots_owner[i] = None
 
