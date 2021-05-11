@@ -248,7 +248,6 @@ class Player():
         rule_target_slot['N0'] = None
 
         for id in range(0,4):
-            #print ("Checking peg %s:" % id, end=" ")
 
             target_slot = self.pegs_location[id] + dice
             #print (target_slot)
@@ -260,7 +259,7 @@ class Player():
 
                 rule_score["E%s" % id] += 80
                 rule_target_slot["E%s" % id] = self.slot_enter
-                #print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
+                print ("Peg %s enter game --> %s" % (id,rule_score["E%s" % id]))
 
             # Send enemy peg to start
             if target_slot < self.slot_goal1 and \
@@ -269,7 +268,7 @@ class Player():
                 if self.slots[target_slot] > 9: # Enemy peg ids are over 9
                     rule_score["X%s" % id] += 90
                     rule_target_slot["X%s" % id] = target_slot
-                    print ("Eat enemy peg from %s with score %s" % (target_slot, rule_score["E%s" % id]), end=" ")
+                    print ("Peg %s eat enemy peg from %s --> %s" % (id,target_slot, rule_score["E%s" % id]))
 
             # Move peg X to goal
             if self.pegs_location[id] < self.slot_goal1 \
@@ -279,7 +278,7 @@ class Player():
 
                 rule_score["G%s" % id] += 100 + self.pegs_location[id] # Peg closest to the goal have higher score
                 rule_target_slot["G%s" % id] = target_slot
-                #print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]), end=" ")
+                print ("Peg %s move to goal slot %s --> %s" % (id, target_slot,rule_score["G%s" % id]), end=" ")
 
             # Move peg X
             if self.pegs_location[id] >= self.slot_enter \
@@ -289,16 +288,15 @@ class Player():
                     rule_score["M%s" % id] += self.pegs_location[id] # Peg closest to the goal have higher score
 
                     if self.pegs_location[id] == self.slot_enter: # Priorize peg in enter slot
-                        #print("...is at enter slot", end=" ")
+                        print("Peg %s is in enter slot --> +50", id)
                         rule_score["M%s" % id] += 50
 
                     if self.pegs_location[id] in self.slot_enter_enemy: # Priorize peg in enemy enter slot
-                        #print("...is at enemy enter slot", end=" ")
+                        print("Peg %s is at enemy enter slot %s --> + 60" % (id, self.pegs_location[id]))
                         rule_score["M%s" % id] += 60
 
-
                     rule_target_slot["M%s" % id] = target_slot
-                    #print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]), end=" ")
+                    print ("Peg %s move to %s --> %s" % (id,target_slot,rule_score["M%s" % id]), end=" ")
 
 
             #print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot["E%s" % id],rule_target_slot["G%s" % id],rule_target_slot["M%s" % id]))
