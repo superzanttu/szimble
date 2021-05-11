@@ -89,7 +89,7 @@ class Player():
         print (id, pegs_location)
 
         for i in range(self.slot_enter, self.slot_goal1):
-            if self.slots[i] = 9:
+            if self.slots[i] == 9:
                 self.slots[i] = None
             if i in pegs_location:
                 self.slots[i] = "9"
