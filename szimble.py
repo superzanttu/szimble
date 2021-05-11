@@ -271,7 +271,7 @@ def main():
     while user_input == "":
         player.play()
         player.status()
-        user_input = input()
+        #user_input = input()
 
     log.info("DONE")
 
