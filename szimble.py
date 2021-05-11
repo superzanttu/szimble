@@ -62,9 +62,9 @@ log = logging.getLogger()
 
 class Player():
 
-    def __init__(self, player_name):
+    def __init__(self, player_id):
         #print("Init player: %s" % player_name)
-        self.name = player_name
+        self.id = player_id
         # Slot index 0..35
         self.turn_counter = 0
         self.dice = 0
@@ -81,6 +81,7 @@ class Player():
         self.slots =  [None for x in range(0,36)]
         self.slots_owner = [None for x in range(0,36)]
         self.status_winner = False
+        self.status_peg_eaten = None
 
         # All pegs in start
         self.slots[0] = 0
@@ -88,7 +89,7 @@ class Player():
         self.slots[2] = 2
         self.slots[3] = 3
 
-    def set_enemy_pegs_location(self, name,pegs_location):
+    def set_enemy_pegs_location(self, player_id,pegs_location):
         print ("Set enemy pegs location: %s %s" % (name, pegs_location))
 
         for i in range(self.slot_enter, self.slot_goal1):
@@ -113,63 +114,63 @@ class Player():
         #self.enemy_pegs_location =
 
 
-    def move_peg_to_start(self,id):
+    def move_peg_to_start(self,peg_id):
         #print("Move player %s peg %s to start" % (self.name, id))
 
         self.pegs_in_start += 1
         self.pegs_in_game -= 1
 
         # Clear current location
-        if self.pegs[id] != None:
-            self.slots[self.pegs[id]] = None
-            self.slots_owner[self.pegs[id]] = None
+        if self.pegs[peg_id] != None:
+            self.slots[self.pegs[peg_id]] = None
+            self.slots_owner[self.pegs[peg_id]] = None
 
         # Move peg to empty start slot
         for i in self.slots_start:
             if self.slots[i] == None:
-                self.slots[i] = id
+                self.slots[i] = peg_id
                 self.slots_owner[i] = self.name
-                self.pegs[id] = i
+                self.pegs[peg_id] = i
                 print("...peg moved to slot %s" % i)
                 return
 
-    def move_peg_to_game(self,id):
+    def move_peg_to_game(self,peg_id):
         #print("Move player %s peg %s to game" % (self.name, id))
 
         self.pegs_in_start -= 1
         self.pegs_in_game += 1
 
         # Clear current location
-        if self.pegs_location[id] != None:
-            self.slots[self.pegs_location[id]] = None
-            self.slots_owner[self.pegs_location[id]] = None
+        if self.pegs_location[peg_id] != None:
+            self.slots[self.pegs_location[peg_id]] = None
+            self.slots_owner[self.pegs_location[peg_id]] = None
 
         # Move peg to enter slot
         if self.slots[self.slot_enter] == None:
-            self.slots[self.slot_enter] = id
+            self.slots[self.slot_enter] = peg_id
             self.slots_owner[self.slot_enter] = self.name
-            self.pegs_location[id]= self.slot_enter
+            self.pegs_location[peg_id]= self.slot_enter
         else:
             print("ERROR: Enter slot occupied")
             exit(1)
 
 
-    def move_peg_to_goal(self,id,target_slot):
+    def move_peg_to_goal(self,peg_id,target_slot):
         #print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
 
         self.pegs_in_goal += 1
         self.pegs_in_game -= 1
 
         # Clear current location
-        if self.pegs_location[id] != None:
-            self.slots[self.pegs_location[id]] = None
-            self.slots_owner[self.pegs_location[id]] = None
+        if self.pegs_location[peg_id] != None:
+            self.slots[self.pegs_location[peg_id]] = None
+            self.slots_owner[self.pegs_location[peg_id]] = None
 
         # Move peg to new slot
         if self.slots[target_slot] == None:
-            self.slots[target_slot] = id
+            self.slots[target_slot] = peg_id
             self.slots_owner[target_slot] = self.name
-            self.pegs_location[id]= target_slot
+            self.pegs_location[peg_id]= target_slot
         else:
             print("ERROR: Target slot occupied")
             exit(1)
@@ -178,36 +179,36 @@ class Player():
             self.status_winner = True
 
 
-    def move_peg_to_slot(self,id,target_slot):
+    def move_peg_to_slot(self,peg_id,target_slot):
         #print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
 
         # Clear current location
-        if self.pegs_location[id] != None:
-            self.slots[self.pegs_location[id]] = None
-            self.slots_owner[self.pegs_location[id]] = None
+        if self.pegs_location[peg_id] != None:
+            self.slots[self.pegs_location[peg_id]] = None
+            self.slots_owner[self.pegs_location[peg_id]] = None
 
         # Move peg to new slot
         if self.slots[target_slot] == None:
-            self.slots[target_slot] = id
+            self.slots[target_slot] = peg_id
             self.slots_owner[target_slot] = self.name
-            self.pegs_location[id]= target_slot
+            self.pegs_location[peg_id]= target_slot
         else:
             print("ERROR: Target slot occupied")
             exit(1)
 
-    def move_peg_over_enemy(self,id,target_slot):
+    def move_peg_over_enemy(self,peg_id,target_slot):
         #print("Move player %s peg %s over enemy in slot %s" % (self.name, id,target_slot))
 
         # Clear current location
-        if self.pegs_location[id] != None:
-            self.slots[self.pegs_location[id]] = None
-            self.slots_owner[self.pegs_location[id]] = None
+        if self.pegs_location[peg_id] != None:
+            self.slots[self.pegs_location[peg_id]] = None
+            self.slots_owner[self.pegs_location[peg_id]] = None
 
         # Move peg over enemy
         if self.slots[target_slot] != None:
-            self.slots[target_slot] = id
+            self.slots[target_slot] = peg_id
             self.slots_owner[target_slot] = self.name
-            self.pegs_location[id]= target_slot
+            self.pegs_location[peg_id]= target_slot
         else:
             print("ERROR: Target slot occupied")
             exit(1)
@@ -357,13 +358,13 @@ def main():
 
     log.info("Game is runnning.")
 
-    players = [Player("Red"),Player("Yellow")]
+    players = [Player(0),Player(1)]
 
     for p in players:
-        p.set_enemy_pegs_location("Red",[0,1,2,3])
-        p.set_enemy_pegs_location("Yellow",[0,1,2,3])
-        p.set_enemy_pegs_location("Green",[0,1,2,3])
-        p.set_enemy_pegs_location("Blue",[0,1,2,3])
+        p.set_enemy_pegs_location(0,[0,1,2,3])
+        p.set_enemy_pegs_location(1,[0,1,2,3])
+        p.set_enemy_pegs_location(2,[0,1,2,3])
+        p.set_enemy_pegs_location(3,[0,1,2,3])
 
     for p in players:
         p.status()
