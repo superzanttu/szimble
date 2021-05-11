@@ -95,9 +95,9 @@ class Player():
                 self.slots[i] = id*10 + 0
             elif i == pegs_location[1]:
                 self.slots[i] = id*10 + 1
-            elif i == pegs_location[1]:
+            elif i == pegs_location[2]:
                 self.slots[i] = id*10 + 2
-            elif i == pegs_location[1]:
+            elif i == pegs_location[3]:
                 self.slots[i] = id*10 + 3
 
         print (self.slots)
