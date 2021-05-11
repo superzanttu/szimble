@@ -358,14 +358,16 @@ def main():
     for p in players:
         p.status()
 
-    user_input=""
-    while player.pegs_in_goal<4:
-        peg_eaten = player.play()
-        player.status()
-        #user_input = input()
+    game_is_running = True
+    while game_is_running:
+
+        for p in plyers:
+            p.play()
+            p.status()
+            if p.status_winner:
+                game_is_running = False
 
     print("End of the game")
-
 
     log.info("DONE")
 
