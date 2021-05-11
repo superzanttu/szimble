@@ -99,12 +99,12 @@ class Player():
 
                 s = (s-4) % 28 + 4
 
-
+                self.slots[p] = id*10 + p
 
                 print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
 
                 #if s == pegs_location[0]:
-                #    self.slots[i] = id*10 + 0
+                #
 
         #print (self.slots)
         #self.enemy_pegs_location =
