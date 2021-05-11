@@ -93,8 +93,9 @@ class Player():
         print ("Player %s enemy pegs locations: %s %s" % (self.id, player_id, pegs_location))
 
         for i in range(self.slot_enter, self.slot_goal1):
+            print ("HIHI",i,self.slots_owner_id[i] , player_id)
             if self.slots_owner_id[i] == player_id:
-                print ("HIHI",i,self.slots_owner_id[i] , player_id)
+
                 self.slots[i] = None
                 self.slots_owner_id[i] = None
 
