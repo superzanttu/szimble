@@ -296,6 +296,9 @@ def main():
 
     player = Player("Red")
     player.set_enemy_pegs_location(1,[7,11,23,29])
+    player.set_enemy_pegs_location(2,[7,11,23])
+    player.set_enemy_pegs_location(3,[7,11])
+
 
     player.status()
 
