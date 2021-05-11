@@ -361,7 +361,7 @@ def main():
     game_is_running = True
     while game_is_running:
 
-        for p in plyers:
+        for p in players:
             p.play()
             p.status()
             if p.status_winner:
