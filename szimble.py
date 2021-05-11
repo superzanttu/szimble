@@ -66,7 +66,10 @@ class Player():
         print("Init player: %s" % player_name)
         self.name = player_name
         # Slot index 0..35
-        self.pegs = [None, None, None, None]
+        self.pegs = [0, 1, 2, 3] # All pegs in start
+        self.pegs_in_start = 4
+        self.pegs_in_game = 0
+        self.pegs_in_goal = 0
         self.slots_start = [0,1,2,3]
         self.slot_enter = 4
         self.slot_enter_enemy = [11,18,25]
@@ -74,8 +77,17 @@ class Player():
         self.slot_goal2 = 35
         self.slots =  [None for x in range(0,36)]
 
+        # All pegs in start
+        self.slots[0] = 0
+        self.slots[1] = 1
+        self.slots[2] = 2
+        self.slots[3] = 3
+
     def move_peg_to_start(self,id):
         print("Move player %s peg %s to start" % (self.name, id))
+
+        self.pegs_in_start += 1
+        self.pegs_in_game -= 1
 
         # Clear current location
         if self.pegs[id] != None:
@@ -92,6 +104,9 @@ class Player():
     def move_peg_to_game(self,id):
         print("Move player %s peg %s to game" % (self.name, id))
 
+        self.pegs_in_start -= 1
+        self.pegs_in_game += 1
+
         # Clear current location
         if self.pegs[id] != None:
             self.slots[self.pegs[id]] = None
@@ -107,6 +122,9 @@ class Player():
 
     def move_peg_to_goal(self,id,target_slot):
         print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
+
+        self.pegs_in_goal += 1
+        self.pegs_in_game -= 1
 
         # Clear current location
         if self.pegs[id] != None:
@@ -138,7 +156,7 @@ class Player():
 
 
     def status(self):
-        print ("Player %s have pegs in game at %s" % (self.name,self.pegs))
+        print ("Player %s have %s pegs in start %s in game and % in goal at %s" % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs))
 
         txt=""
         for i in range(0,4):
@@ -181,9 +199,6 @@ class Player():
         rule_score['N0'] = 1 # Don't know what to do
         rule_target_slot['N0'] = None
 
-
-
-
         for id in range(0,4):
             print ("Checking peg %s:" % id, end=" ")
             target_slot = self.pegs[id] + dice
@@ -220,11 +235,7 @@ class Player():
 
             print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot["E%s" % id],rule_target_slot["G%s" % id],rule_target_slot["M%s" % id]))
 
-
-
-
-
-        # Select best rule based on value
+        # Select best rule based on score
         selected_rule_score = 0
         selected_rule_name = ""
         for k in rule_score.keys():
@@ -260,10 +271,6 @@ def main():
     log.info("Game is runnning.")
 
     player = Player("Red")
-    player.move_peg_to_start(0)
-    player.move_peg_to_start(1)
-    player.move_peg_to_start(2)
-    player.move_peg_to_start(3)
 
     player.status()
 
