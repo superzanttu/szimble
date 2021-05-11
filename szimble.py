@@ -86,7 +86,7 @@ class Player():
         self.slots[3] = 3
 
     def set_enemy_pegs_location(self, id,pegs_location):
-        count = 0
+        print (id, pegs_location)
         for i in self.slots:
             if i == 9:
                 i = None
