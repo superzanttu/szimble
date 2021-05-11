@@ -159,34 +159,36 @@ class Player():
     def status(self):
         print ("Player %s have %s pegs in start %s in game and %s in goal at %s" % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs_location))
 
-        txt=""
+        start=""
         for i in range(0,4):
             if self.slots[i] == None:
-                txt += "."
+                start += "."
             else:
-                txt += str(self.slots[i])
-        print("Start : %s" % txt)
+                start += str(self.slots[i])
+        #print("Start : %s" % start)
 
-        txt=""
+        goal=""
         for i in range(32,36):
             if self.slots[i] == None:
-                txt += "."
+                goal += "."
             else:
-                txt += str(self.slots[i])
-        print("Goal  : %s" % txt)
+                goal += str(self.slots[i])
+        #print("Goal  : %s" % goal)
 
-        txt=""
+        slots=""
         for i in range(4,32):
             if self.slots[i] == None:
-                txt += "."
+                slots += "."
             else:
-                txt += str(self.slots[i])
-        print("Slots : %s" % txt)
+                slots += str(self.slots[i])
+        #print("Slots : %s" % slots)
+
+        print ("%s %s %s %s" % (self.turn_counter,start, slots, goal ))
 
     def play(self):
         dice = random.randrange(1,7)
         self.turn_counter += 1
-        print("\nTurn: %s Dice: %s " % (self.turn_counter,dice))
+        #print("\nTurn: %s Dice: %s " % (self.turn_counter,dice))
 
         rule_score = {}
         rule_target_slot = {}
