@@ -186,7 +186,7 @@ class Player():
     def play(self):
         dice = random.randrange(1,7)
         self.turn_counter += 1
-        print("Turn: %s Dice: %s " % (dice, self.turn_counter))
+        print("\nTurn: %s Dice: %s " % (dice, self.turn_counter))
 
         rule_score = {}
         rule_target_slot = {}
