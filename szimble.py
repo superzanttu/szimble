@@ -92,8 +92,10 @@ class Player():
             if self.slots[i] == 9:
                 self.slots[i] = None
 
+            for p in range (0,5):
+                s = i + 7 * i
 
-            s = i + 7 * i
+                print ("id %s slot %s --> %s"  % (id, pegs_location[p],s ))
 
             if s == pegs_location[0]:
                 self.slots[i] = id*10 + 0
