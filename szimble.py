@@ -365,7 +365,7 @@ def main():
         for p in players:
             p.play()
             p.status()
-            for o in player:
+            for o in players:
                 if o!=p:
                     print (p_count)
             p_count += 1
