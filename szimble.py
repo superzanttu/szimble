@@ -93,7 +93,7 @@ class Player():
                 self.slots[i] = None
 
             for p in range (0,4):
-                s = i + 7 * i
+                s =  pegs_location[p]+ 7 * i
 
                 print ("id %s slot %s --> %s"  % (id, pegs_location[p],s))
 
