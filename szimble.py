@@ -269,7 +269,7 @@ class Player():
                 if self.slots[target_slot] > 9: # Enemy peg ids are over 9
                     rule_score["X%s" % id] += 90
                     rule_target_slot["X%s" % id] = target_slot
-                    print ("...eat enemy peg from %s with score %s" % (target_slot, rule_score["E%s" % id]), end=" ")
+                    print ("Eat enemy peg from %s with score %s" % (target_slot, rule_score["E%s" % id]), end=" ")
 
             # Move peg X to goal
             if self.pegs_location[id] < self.slot_goal1 \
