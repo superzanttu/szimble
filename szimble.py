@@ -254,7 +254,7 @@ class Player():
             #print (target_slot)
 
             # Move peg to enter slot
-            if dice == 6 \
+            if self.dice == 6 \
                 and self.slots[self.slot_enter] == None \
                 and self.pegs_location[id] < self.slot_enter:
 
