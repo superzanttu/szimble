@@ -169,7 +169,7 @@ class Player():
             print("ERROR: Target slot occupied")
             exit(1)
 
-        if self.pegs_in_goal = 4: # We are a winner!
+        if self.pegs_in_goal == 4: # We are a winner!
             self.status_winner = True
 
 
