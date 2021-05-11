@@ -94,14 +94,15 @@ class Player():
 
 
         for p in range (0,4):
-            s =  pegs_location[p] + id * 7
+            if p != None
+                s =  pegs_location[p] + id * 7
 
 
 
-            print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
+                print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
 
-            #if s == pegs_location[0]:
-            #    self.slots[i] = id*10 + 0
+                #if s == pegs_location[0]:
+                #    self.slots[i] = id*10 + 0
 
         #print (self.slots)
         #self.enemy_pegs_location =
