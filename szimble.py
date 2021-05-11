@@ -97,6 +97,8 @@ class Player():
             if pegs_location[p]:
                 s =  pegs_location[p] + id * 7
 
+                s = (s-4) % 28 + 4
+
 
 
                 print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
