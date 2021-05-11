@@ -90,7 +90,7 @@ class Player():
         self.slots[3] = 3
 
     def set_enemy_pegs_location(self, player_id,pegs_location):
-        print ("Player %s Set enemy pegs location: %s %s" % (self.id, player_id, pegs_location))
+        print ("Player %s set enemy pegs location: %s %s" % (self.id, player_id, pegs_location))
 
         for i in range(self.slot_enter, self.slot_goal1):
             if self.slots_owner_id[i] == player_id:
@@ -99,6 +99,7 @@ class Player():
 
         for p in range (0,4):
             if pegs_location[p] and pegs_location[p] >=4 :
+                print ("pegs_location[p]:",pegs_location[p])
                 s =  pegs_location[p] + id * 7
                 s = (s-4) % 28 + 4
 
