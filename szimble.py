@@ -354,7 +354,7 @@ def main():
 
     user_input=""
     while player.pegs_in_goal<4:
-        player.play()
+        peg_eaten = player.play()
         player.status()
         #user_input = input()
 
