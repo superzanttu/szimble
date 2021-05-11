@@ -95,6 +95,7 @@ class Player():
         for i in range(self.slot_enter, self.slot_goal1):
             print ("HIHI",i,self.slots_owner_id[i] , player_id)
             if self.slots_owner_id[i] == player_id:
+                print ("   HI")
 
                 self.slots[i] = None
                 self.slots_owner_id[i] = None
