@@ -226,10 +226,10 @@ class Player():
                 slots += "{:.>2} ".format(self.slots[i])
         #print("Slots : %s" % slots)
 
-        print ("%s %s %s %s\n" % (self.turn_counter,start, slots, goal ))
+        print ("%s %s %s %s %s\n" % (self.turn_counter,self.dice, start, slots, goal ))
 
     def play(self):
-        dice = random.randrange(1,7)
+        self.dice = random.randrange(1,7)
         self.turn_counter += 1
         #print("\nTurn: %s Dice: %s " % (self.turn_counter,dice))
 
@@ -249,7 +249,7 @@ class Player():
 
         for id in range(0,4):
 
-            target_slot = self.pegs_location[id] + dice
+            target_slot = self.pegs_location[id] + self.dice
             #print (target_slot)
 
             # Move peg to enter slot
