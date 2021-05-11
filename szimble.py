@@ -66,7 +66,7 @@ class Player():
         print("Init player: %s" % player_name)
         self.name = player_name
         # Slot index 0..35
-        self.peg_location = [0, 1, 2, 3] # All pegs in start
+        self.pegs_location = [0, 1, 2, 3] # All pegs in start
         self.pegs_in_start = 4
         self.pegs_in_game = 0
         self.pegs_in_goal = 0
@@ -156,7 +156,7 @@ class Player():
 
 
     def status(self):
-        print ("Player %s have %s pegs in start %s in game and %s in goal at %s" % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs))
+        print ("Player %s have %s pegs in start %s in game and %s in goal at %s" % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs_location))
 
         txt=""
         for i in range(0,4):
