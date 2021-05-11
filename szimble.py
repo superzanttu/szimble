@@ -94,9 +94,9 @@ class Player():
 
 
         for p in range (0,4):
-            s =  pegs_location[p]+ 7 * i
+            s =  pegs_location[p]* 7
 
-            print ("id %s slot %s --> %s"  % (id, pegs_location[p],s))
+            print ("id %s enemy slot %s --> %s"  % (id, pegs_location[p],s))
 
             #if s == pegs_location[0]:
             #    self.slots[i] = id*10 + 0
