@@ -190,9 +190,9 @@ class Player():
         goal=""
         for i in range(32,36):
             if self.slots[i] == None:
-                goal += ".. "
+                goal += ". "
             else:
-                goal += {:..>1} ".format(self.slots[i])
+                goal += {:.>1} ".format(self.slots[i])
         #print("Goal  : %s" % goal)
 
         slots=""
