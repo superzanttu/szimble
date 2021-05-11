@@ -201,7 +201,7 @@ class Player():
 
         for id in range(0,4):
             print ("Checking peg %s:" % id, end=" ")
-            target_slot = self.pegs[id] + dice
+            target_slot = self.pegs_location[id] + dice
 
             # Move peg to enter slot
             if dice == 6 and self.slots[self.slot_enter] == None and self.pegs[id] < self.slot_enter:
