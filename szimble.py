@@ -367,7 +367,7 @@ def main():
 
     log.info("Game is runnning.")
 
-    players = [Player(0),Player(1)]
+    players = [Player(0),Player(1),[Player(2),Player(3)]]
 
     for p in players:
         p.set_enemy_pegs_location(0,[0,1,2,3])
