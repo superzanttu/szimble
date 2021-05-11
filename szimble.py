@@ -66,6 +66,7 @@ class Player():
         print("Init player: %s" % player_name)
         self.name = player_name
         # Slot index 0..35
+        self.turn_counter = 0
         self.pegs_location = [0, 1, 2, 3] # All pegs in start
         self.pegs_in_start = 4
         self.pegs_in_game = 0
@@ -184,7 +185,8 @@ class Player():
 
     def play(self):
         dice = random.randrange(1,7)
-        print("Dice: %s " % dice)
+        self.turn_counter += 1
+        print("Turn: %s Dice: %s " % (dice, self.turn_counter)
 
         rule_score = {}
         rule_target_slot = {}
