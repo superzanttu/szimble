@@ -360,7 +360,7 @@ def main():
 
     game_is_running = True
     while game_is_running:
-
+        print ("\n-------------------------")
         for p in players:
             p.play()
             p.status()
