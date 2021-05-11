@@ -97,7 +97,7 @@ class Player():
 
 
         for p in range (0,4):
-            if pegs_location[p]:
+            if pegs_location[p] and  pegs_location[p] >=4 :
                 s =  pegs_location[p] + id * 7
 
                 s = (s-4) % 28 + 4
