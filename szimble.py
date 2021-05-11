@@ -283,7 +283,7 @@ def main():
         #user_input = input()
 
     print("End of the game")
-    player.status()
+
 
     log.info("DONE")
 
