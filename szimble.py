@@ -68,7 +68,7 @@ class Player():
         # Slot index 0..35
         self.turn_counter = 0
         self.pegs_location = [0, 1, 2, 3] # All pegs in start
-        self.enemy_pegs_location = [1: [None,None,None,None], 2: [None,None,None,None],3: [None,None,None,None]]
+        self.enemy_pegs_location = {1: [None,None,None,None], 2: [None,None,None,None],3: [None,None,None,None]}
         self.pegs_in_start = 4
         self.pegs_in_game = 0
         self.pegs_in_goal = 0
