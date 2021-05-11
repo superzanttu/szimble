@@ -91,8 +91,8 @@ class Player():
         for i in range(self.slot_enter, self.slot_goal1):
             if self.slots[i]!=None:
                 p = self.slots[i] % 10
-                print (id,p)
-                self.slots[i] = None
+                if p = id:
+                    self.slots[i] = None
 
 
         for p in range (0,4):
