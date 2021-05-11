@@ -275,7 +275,7 @@ def main():
     player.status()
 
     user_input=""
-    while user_input == "":
+    while player.pegs_in_goal<4:
         player.play()
         player.status()
         user_input = input()
