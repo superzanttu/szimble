@@ -85,15 +85,16 @@ class Player():
         self.slots[2] = 2
         self.slots[3] = 3
 
-    def set_enemy_pegs_location(self, name,pegs_location):
+    def set_enemy_pegs_location(self, id,pegs_location):
         count = 0
         for i in self.slots:
             if i == 9:
                 i = None
             if i in pegs_location:
-                i = 9
+                self.slot = "9"
 
-        self.enemy_pegs_location = location
+
+        #self.enemy_pegs_location =
 
 
     def move_peg_to_start(self,id):
