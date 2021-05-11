@@ -299,9 +299,9 @@ def main():
     log.info("Game is runnning.")
 
     player = Player("Red")
-    player.set_enemy_pegs_location(1,[4,None,None,None])
-    player.set_enemy_pegs_location(2,[4,None,None,None])
-    player.set_enemy_pegs_location(3,[4,None,None,None])
+    player.set_enemy_pegs_location(1,[4,31,None,None])
+    player.set_enemy_pegs_location(2,[4,31,None,None])
+    player.set_enemy_pegs_location(3,[4,31,None,None])
 
 
     player.status()
