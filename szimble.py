@@ -204,20 +204,20 @@ class Player():
         rule_target_slot['N0'] = None
 
         for id in range(0,4):
-            print ("Checking peg %s:" % id, end=" ")
+            #print ("Checking peg %s:" % id, end=" ")
             target_slot = self.pegs_location[id] + dice
 
             # Move peg to enter slot
             if dice == 6 and self.slots[self.slot_enter] == None and self.pegs_location[id] < self.slot_enter:
                 rule_score["E%s" % id] += 90
                 rule_target_slot["E%s" % id] = self.slot_enter
-                print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
+                #print ("...enter game with score %s" % (rule_score["E%s" % id]), end=" ")
 
             # Move peg X to goal
             if self.pegs_location[id] < self.slot_goal1 and target_slot >= self.slot_goal1 and target_slot <= self.slot_goal2 and self.slots[target_slot] == None:
                 rule_score["G%s" % id] += 100 + self.pegs_location[id] # Peg closest to the goal have higher score
                 rule_target_slot["G%s" % id] = target_slot
-                print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]), end=" ")
+                #print ("...move to goal slot %s with score %s" % (target_slot,rule_score["G%s" % id]), end=" ")
 
             # Move peg X
             if self.pegs_location[id] >= self.slot_enter and target_slot < self.slot_goal1:
@@ -225,19 +225,19 @@ class Player():
                     rule_score["M%s" % id] += self.pegs_location[id] # Peg closest to the goal have higher score
 
                     if self.pegs_location[id] == self.slot_enter: # Priorize peg in enter slot
-                        print("...is at enter slot", end=" ")
+                        #print("...is at enter slot", end=" ")
                         rule_score["M%s" % id] += 50
 
                     if self.pegs_location[id] in self.slot_enter_enemy: # Priorize peg in enemy enter slot
-                        print("...is at enemy enter slot", end=" ")
+                        #print("...is at enemy enter slot", end=" ")
                         rule_score["M%s" % id] += 60
 
 
                     rule_target_slot["M%s" % id] = target_slot
-                    print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]), end=" ")
+                    #print ("...move to %s with score %s" % (target_slot,rule_score["M%s" % id]), end=" ")
 
 
-            print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot["E%s" % id],rule_target_slot["G%s" % id],rule_target_slot["M%s" % id]))
+            #print (" Scores: E=%s G=%s M=%s Slots: %s %s %s" % (rule_score["E%s" % id],rule_score["G%s" % id],rule_score["M%s" % id],rule_target_slot["E%s" % id],rule_target_slot["G%s" % id],rule_target_slot["M%s" % id]))
 
         # Select best rule based on score
         selected_rule_score = 0
