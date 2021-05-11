@@ -170,7 +170,7 @@ class Player():
 
 
     def status(self):
-        print ("Player %s, %s %s %s pegs at %s." % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs_location))
+        #print ("Player %s, %s %s %s pegs at %s." % (self.name,self.pegs_in_start,self.pegs_in_game,self.pegs_in_goal,self.pegs_location))
 
         start=""
         for i in range(0,4):
