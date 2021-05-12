@@ -134,7 +134,7 @@ class Player():
                 Board.peg_id[i] = None
                 Board.peg_owner_id[i] = None
 
-        print(self.pegs_location)
+        #print(self.pegs_location)
         for peg_id in range(0,4):
             peg_location = self.pegs_location[peg_id]
             #print ("peg location:%s slot_enter:%s goal1:%s" % (peg_location,self.slot_enter, self.slot_goal1))
