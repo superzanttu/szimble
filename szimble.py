@@ -72,7 +72,7 @@ class Board:
 
 class Player():
 
-    slots = [None for x in range(0,36)]
+    board = Board()
 
     def __init__(self, player_id):
         print("Init player: %s" % player_id)
