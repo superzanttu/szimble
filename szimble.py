@@ -108,6 +108,22 @@ class Player():
             self.slots_owner_id[i] = Board.slots[real_slot]. peg_owner_id
             #print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
 
+    def update_board(self):
+        for i in range(0,28):
+            if Board.slots[real_slot].peg_owner_id == self.id: # Remove own pegs
+                Board.slots[real_slot].peg_id = None
+                Board.slots[real_slot].peg_owner_id = None
+
+        for l in self.pegs_location:
+            real_slot = (l + Board.player_enter_slot[self.id]) % 28
+
+            print (l,real_slot)
+
+
+            self.slots[i] = Board.slots[real_slot].peg_id
+            self.slots_owner_id[i] = Board.slots[real_slot].peg_owner_id
+
+
 
     def translate_player_id(self,enemy_id):
 
