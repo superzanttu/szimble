@@ -88,6 +88,30 @@ class Board():
         print ("All players          %s" % slots)
         print ("                     %s" % slots_owner_id)
 
+        @classmethod
+        def draw(cls):
+
+            board=[]
+
+            board.append("Szimbe board status:")
+
+            txt=""
+
+            for i in range(0,7):
+                #print (cls.peg_id[i],cls.peg_owner_id[i])
+                if cls.peg_id[i] == None:
+                    txt += "..-"
+                    txt += "..-"
+                else:
+                    txt += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
+
+            board.append(txt)
+
+
+            for r in board:
+                print(r)
+
+
 class Player():
 
     board = Board()
