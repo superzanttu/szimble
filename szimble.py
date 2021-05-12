@@ -62,8 +62,12 @@ log = logging.getLogger()
 
 @dataclass
 class Slot:
-    peg_id: int None
+    peg_id: None
     peg_owner: None
+
+@dataclass
+class Board:
+    slot: [Slot for x in range(0,36)]
 
 
 class Player():
