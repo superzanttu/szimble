@@ -136,14 +136,14 @@ class Player():
                 #Board.slots[i].peg_owner_id = None
 
         print(self.pegs_location)
-        for i in range(0,4):
-            peg_location = self.pegs_location[i]
+        for peg_id in range(0,4):
+            peg_location = self.pegs_location[peg_id]
             if peg_location >= self.slot_enter and peg_location < self.slot_goal1:
                 board_slot = (peg_location - self.slot_enter + self.board.player_enter_slot[self.id]) % 28
                 print ("peg location:%s board_slot:%s slot_enter:%s goal1:%s" % (peg_location,board_slot,self.slot_enter, self.slot_goal1))
 
-                self.board.slots[board_slot].peg_id = self.slots[i]
-                self.board.slots[board_slot].peg_owner_id = self.slots_owner_id[i]
+                self.board.slots[board_slot].peg_id = peg_id
+                self.board.slots[board_slot].peg_owner_id = self.id
 
 
     def translate_player_id(self,enemy_id):
