@@ -115,7 +115,7 @@ class Board():
             else:
                 row += "%s%s" % (cls.peg_id[i],cls.peg_owner_id[i])
 
-            j = 21 + i
+            j = 14 + i
 
             print (i,j)
 
