@@ -106,7 +106,7 @@ class Player():
             real_slot = (i + Board.player_enter_slot[self.id]) % 28
             self.slots[i] = Board.slots[real_slot].peg_id
             self.slots_owner_id[i] = Board.slots[real_slot]. peg_owner_id
-            print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
+            #print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
 
 
     def translate_player_id(self,enemy_id):
