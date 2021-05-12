@@ -117,7 +117,7 @@ class Player():
         for l in self.pegs_location:
             real_slot = (l + Board.player_enter_slot[self.id]) % 28
 
-            print (l,real_slot)
+            print ("kjkjh",l,real_slot)
 
 
             self.slots[i] = Board.slots[real_slot].peg_id
@@ -422,7 +422,7 @@ class Player():
         elif action == "X": # Eat enemy peg
             self.move_peg_over_enemy(peg,target_slot )
 
-
+        self.update_board()
 
 
 
