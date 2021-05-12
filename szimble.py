@@ -69,10 +69,15 @@ class Slot():
 class Board():
     slots: []
 
+    def clear(self):
+        slots = []
+
 
 class Player():
 
     board = Board
+    board.clear()
+
 
     pprint.pprint(board)
     pprint.pprint(board.slots)
