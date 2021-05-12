@@ -118,11 +118,13 @@ class Player():
         for l in self.pegs_location:
             real_slot = (l + Board.player_enter_slot[self.id]) % 28
 
-            print ("kjkjh",l,real_slot)
+            if l >= self.slot_enter and l < self.slot_goal1:
+
+                print ("kjkjh",l,real_slot)
 
 
-            self.slots[i] = Board.slots[real_slot].peg_id
-            self.slots_owner_id[i] = Board.slots[real_slot].peg_owner_id
+                self.slots[i] = Board.slots[real_slot].peg_id
+                self.slots_owner_id[i] = Board.slots[real_slot].peg_owner_id
 
 
 
