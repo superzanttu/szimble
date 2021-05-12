@@ -133,9 +133,8 @@ class Player():
         print("update board %s" % self.id)
         for i in range(0,28):
             if Board.peg_owner_id[i] == self.id: # Remove own pegs
-                pass
-                #Board.peg_id[i] = None
-                #Board.peg_owner_id[i] = None
+                Board.peg_id[i] = None
+                Board.peg_owner_id[i] = None
 
         print(self.pegs_location)
         for peg_id in range(0,4):
