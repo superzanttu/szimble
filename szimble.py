@@ -62,7 +62,7 @@ log = logging.getLogger()
 
 class Slot():
     peg_id = None
-    peg_owner = None
+    peg_owner_id = None
 
 
 class Board():
@@ -105,6 +105,7 @@ class Player():
         for i in range(0,28):
             real_slot = (i + Board.player_enter_slot[self.id]) % 28
             self.slots[i] = Board.slots[real_slot].peg_id
+            self.slots_owner_id[i] = Board.slots[real_slot]. peg_owner_id
             print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
 
 
