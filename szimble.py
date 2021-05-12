@@ -66,12 +66,7 @@ class Slot():
 
 
 class Board():
-    slots: list[int] = field(default_factory=list)
-
-
-    def clear():
-        slots = [None,None]
-
+    slots = [None for x in range(0,36)]
 
 class Player():
 
