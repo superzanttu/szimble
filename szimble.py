@@ -132,9 +132,9 @@ class Board():
             #print (i)
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
-                row += "..-"
+                row = "..-" + row
             else:
-                row += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
+                row = "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i]) + row
         board.append(row[:-1])
 
 
