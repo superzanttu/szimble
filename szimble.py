@@ -123,7 +123,7 @@ class Board():
             else:
                 row = "%s%s" % (cls.peg_id[j],cls.peg_owner_id[j]) + row
 
-
+            print (i,j)
 
             board.append(row)
 
