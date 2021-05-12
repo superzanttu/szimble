@@ -116,9 +116,10 @@ class Player():
                 Board.slots[i].peg_owner_id = None
 
         for l in self.pegs_location:
-            real_slot = (l + Board.player_enter_slot[self.id]) % 28
+
 
             if l >= self.slot_enter and l < self.slot_goal1:
+                real_slot = (l - self.slot_enter + Board.player_enter_slot[self.id]) % 28
 
                 print ("kjkjh",l,real_slot,self.slot_enter, self.slot_goal1)
 
