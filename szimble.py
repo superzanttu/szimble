@@ -135,7 +135,7 @@ class Board():
                 row += "..-"
             else:
                 row += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
-        board.append(row)
+        board.append(row[:-1])
 
 
 
