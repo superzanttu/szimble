@@ -449,6 +449,7 @@ def main():
                 return
 
         Board.status()
+        Board.draw()
 
     print("End of the game")
 
