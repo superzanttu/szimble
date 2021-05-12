@@ -420,11 +420,7 @@ def main():
     players = [Player(0),Player(1),Player(2),Player(3)]
 
     print ("Players...")
-    for p in players:
-        p.set_enemy_pegs_location(0,[0,1,2,3])
-        p.set_enemy_pegs_location(1,[0,1,2,3])
-        p.set_enemy_pegs_location(2,[0,1,2,3])
-        p.set_enemy_pegs_location(3,[0,1,2,3])
+
 
     for p in players:
         p.status()
@@ -433,7 +429,6 @@ def main():
     while game_is_running:
         print ("\n-------------------------")
         for current_player in players:
-            print("PLAY")
             current_player.play()
             for other_player in players:
                 if other_player!=current_player:
