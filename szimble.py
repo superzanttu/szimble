@@ -90,8 +90,8 @@ class Player():
         self.slot_enter_enemy = [11,18,25]
         self.slot_goal1 = 32
         self.slot_goal2 = 35
-        #self.slots =  [None for x in range(0,36)]
-        #self.slots_owner_id = [None for x in range(0,36)]
+        self.slots =  [None for x in range(0,36)]
+        self.slots_owner_id = [None for x in range(0,36)]
         self.status_winner = False
         self.status_peg_eaten = None
 s
@@ -100,6 +100,10 @@ s
         self.slots[1] = 1
         self.slots[2] = 2
         self.slots[3] = 3
+
+    def update_my_slots(self):
+        for i in range(0,36):
+
 
     def translate_player_id(self,enemy_id):
 
@@ -294,6 +298,9 @@ s
         print ("        Owner id     %s" % slots_owner_id)
 
     def play(self):
+        self.update_my_slots()
+
+
         self.dice = random.randrange(1,7)
         self.turn_counter += 1
         #print("\nTurn: %s Dice: %s " % (self.turn_counter,dice))
