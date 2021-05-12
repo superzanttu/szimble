@@ -67,7 +67,7 @@ class Slot():
 
 @dataclass
 class Board():
-    slot: Slot()
+    slot: [Slot for x in range(0,36)]
 
 
 class Player():
