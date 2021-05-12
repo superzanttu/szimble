@@ -457,6 +457,7 @@ def main():
 
     for p in players:
         p.status()
+    Board.status()
 
     game_is_running = True
     while game_is_running:
