@@ -94,7 +94,7 @@ class Player():
         self.slots_owner_id = [None for x in range(0,36)]
         self.status_winner = False
         self.status_peg_eaten = None
-s
+
         # All pegs in start
         self.slots[0] = 0
         self.slots[1] = 1
