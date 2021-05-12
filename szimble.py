@@ -67,7 +67,7 @@ class Slot():
 
 class Board():
     slots = [Slot for x in range(0,27)]
-    plater_enter_slot = [0,7,14,21]
+    player_enter_slot = [0,7,14,21]
     player_exit_slot = [27,6,13,20]
 
 class Player():
@@ -103,6 +103,8 @@ class Player():
 
     def update_my_slots(self):
         for i in range(0,36):
+            real_slot = i + self.player_enter_slot[self.player_id]
+            print("player %s slot %s real_slot %%",self.player_id, i,real_slot)
 
 
     def translate_player_id(self,enemy_id):
