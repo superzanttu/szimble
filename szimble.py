@@ -66,15 +66,13 @@ class Slot():
 
 
 class Board():
-    slots = [Slot for x in range(0,36)]
+    slots = [Slot for x in range(0,27)]
+    plater_enter_slot = [0,7,14,21]
+    player_exit_slot = [27,6,13,20]
 
 class Player():
 
-    board = Board
-
-
-    pprint.pprint(board)
-    pprint.pprint(board.slots)
+    board = Board()
 
     def __init__(self, player_id):
         print("Init player: %s" % player_id)
