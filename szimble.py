@@ -117,6 +117,7 @@ class Player():
         self.slots[3] = 3
 
     def update_my_slots(self):
+        return
         print("update slots %s" % self.id)
         for i in range(0,28):
             real_slot = (i + self.board.player_enter_slot[self.id]) % 28
