@@ -95,15 +95,23 @@ class Board():
 
         board.append("Szimbe board status:")
 
-        txt=""
 
         for i in range(0,7):
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
                 txt += "..-"
+            else:
+                txt += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
+
+        for i in range (7,14):
+            txt="..-..-..-..-..-..-..-..-..-..-..-..-"
+            txt=""
+            if cls.peg_id[i] == None:
+                txt += "..-"
                 txt += "..-"
             else:
                 txt += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
+
 
         board.append(txt)
 
