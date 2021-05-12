@@ -95,6 +95,8 @@ class Board():
 
         board.append("Szimbe board status:")
 
+
+        # Top row
         row=""
         for i in range(0,7):
             #print (cls.peg_id[i],cls.peg_owner_id[i])
@@ -105,12 +107,20 @@ class Board():
 
         board.append(row)
 
+        # left and right sides
         for i in range (7,14):
             row="               "
             if cls.peg_id[i] == None:
                 row += ".."
             else:
                 row += "%s%s" % (cls.peg_id[i],cls.peg_owner_id[i])
+
+            j = 21 + i
+
+            print (i,j)
+
+
+
             board.append(row)
 
 
