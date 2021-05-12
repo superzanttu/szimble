@@ -90,13 +90,11 @@ class Player():
         self.slot_enter_enemy = [11,18,25]
         self.slot_goal1 = 32
         self.slot_goal2 = 35
-        self.slots =  [None for x in range(0,36)]
-        self.slots_owner_id = [None for x in range(0,36)]
+        #self.slots =  [None for x in range(0,36)]
+        #self.slots_owner_id = [None for x in range(0,36)]
         self.status_winner = False
         self.status_peg_eaten = None
-
-        print(self.board.slots)
-
+s
         # All pegs in start
         self.slots[0] = 0
         self.slots[1] = 1
