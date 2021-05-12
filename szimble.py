@@ -122,7 +122,7 @@ class Player():
     def update_my_slots(self):
         print("update slots ->return")
         return
-        print("update slots %s" % self.id)
+        #print("update slots %s" % self.id)
         for i in range(0,28):
             real_slot = (i + self.board.player_enter_slot[self.id]) % 28
             self.slots[i] = self.board.slots[real_slot].peg_id
@@ -130,7 +130,7 @@ class Player():
             #print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
 
     def update_board(self):
-        print("update board %s" % self.id)
+        #print("update board %s" % self.id)
         for i in range(0,28):
             if Board.peg_owner_id[i] == self.id: # Remove own pegs
                 Board.peg_id[i] = None
@@ -139,10 +139,10 @@ class Player():
         print(self.pegs_location)
         for peg_id in range(0,4):
             peg_location = self.pegs_location[peg_id]
-            print ("peg location:%s slot_enter:%s goal1:%s" % (peg_location,self.slot_enter, self.slot_goal1))
+            #print ("peg location:%s slot_enter:%s goal1:%s" % (peg_location,self.slot_enter, self.slot_goal1))
             if peg_location >= self.slot_enter and peg_location < self.slot_goal1:
                 board_slot = (peg_location - self.slot_enter + self.board.player_enter_slot[self.id]) % 28
-                print ("  update board_slot:%s  " % (board_slot))
+                #print ("  update board_slot:%s  " % (board_slot))
                 Board.peg_id[board_slot] = peg_id
                 Board.peg_owner_id[board_slot] = self.id
 
