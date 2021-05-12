@@ -144,7 +144,7 @@ class Player():
                 board_slot = (peg_location - self.slot_enter + self.board.player_enter_slot[self.id]) % 28
                 print ("  update board_slot:%s  " % (board_slot))
                 Board.slots[board_slot].peg_id = peg_id
-                #Board.slots[board_slot].peg_owner_id = self.id
+                Board.slots[board_slot].peg_owner_id = self.id
 
                 for i in range (0,28):
                     print (i,Board.slots[i].peg_id,Board.slots[i].peg_owner_id)
