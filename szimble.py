@@ -75,6 +75,7 @@ class Player():
     board = Board(None)
 
     pprint.pprint(board)
+    pprint.pprint(board.slots)
 
     def __init__(self, player_id):
         print("Init player: %s" % player_id)
