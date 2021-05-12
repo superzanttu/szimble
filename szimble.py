@@ -62,7 +62,7 @@ log = logging.getLogger()
 
 @dataclass
 class Slot:
-    peg_id: None
+    peg_id: int None
     peg_owner: None
 
 
