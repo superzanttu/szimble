@@ -147,66 +147,7 @@ class Player():
                 #for i in range (0,28):
                 #    print (i,Board.peg_id[i],Board.peg_owner_id[i])
 
-
-    def x_translate_player_id(self,enemy_id):
-
-        if self.id == enemy_id:
-            print("PANIC: Can't translate own id")
-            exit(1)
-
-        if self.id == 0:
-            if enemy_id == 1: return (1)
-            if enemy_id == 2: return (2)
-            if enemy_id == 3: return (3)
-        elif self.id == 1:
-            if enemy_id == 0: return (1)
-            if enemy_id == 2: return (2)
-            if enemy_id == 3: return (3)
-        elif self.id == 2:
-            if enemy_id == 0: return (1)
-            if enemy_id == 1: return (2)
-            if enemy_id == 3: return (3)
-        elif self.id == 3:
-            if enemy_id == 0: return (1)
-            if enemy_id == 1: return (2)
-            if enemy_id == 2: return (3)
-        else:
-            print("PANIC: Unknown enemy_id")
-            exit(1)
-
-    def set_enemy_pegs_location(self, player_id,pegs_location):
-        #print ("Player %s enemy pegs locations: %s %s" % (self.id, player_id, pegs_location))
-
-        t_player_id = self.translate_player_id(player_id)
-
-        if player_id != self.id:
-            for i in range(self.slot_enter, self.slot_goal1):
-                #print ("HIHI",i,self.slots_owner_id[i] , player_id)
-                if self.slots_owner_id[i] == t_player_id + 10:
-                    #print ("   HI")
-
-                    self.slots[i] = None
-                    self.slots_owner_id[i] = None
-
-            for p in range (0,4):
-                if pegs_location[p] and pegs_location[p] >= self.slot_enter and pegs_location[p] < self.slot_goal1 :
-                    #print ("Set peg owner id for slot",pegs_location[p])
-                    s =  pegs_location[p] + t_player_id * 7
-                    s = (s-4) % 28 + 4
-
-                    self.slots[s] = t_player_id*10 + p
-                    self.slots_owner_id[s] = t_player_id + 10
-
-                    #print ("id %s enemy slot %s --> %s"  % (player_id, pegs_location[p],s))
-
-                    #if s == pegs_location[0]:
-                    #
-
-            #print (self.slots)
-            #self.enemy_pegs_location =
-
-
-    def move_peg_to_start(self,peg_id):
+    def x_move_peg_to_start(self,peg_id):
         #print("Move player %s peg %s to start" % (self.name, id))
 
         self.pegs_in_start += 1
