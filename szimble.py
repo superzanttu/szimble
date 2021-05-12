@@ -70,6 +70,24 @@ class Board():
     player_enter_slot = [0,7,14,21]
     player_exit_slot = [27,6,13,20]
 
+    def status(self):
+
+        slots=""
+        slots_owner_id=""
+        for i in range(0,28):
+            if self.slots[i] == None:
+                slots += ".. "
+                slots_owner_id += ".. "
+            else:
+                slots += "{:.>2} ".format(self.slots[i])
+                slots_owner_id += "{:.>2} ".format(self.slots_owner_id[i])
+
+        #print("Slots : %s" % slots)
+
+        print ("Board %s" % slots)
+        print ("      %s" % slots_owner_id)
+
+
 class Player():
 
     board = Board()
@@ -117,13 +135,9 @@ class Player():
 
         print(self.pegs_location)
         for l in self.pegs_location:
-
-
             if l >= self.slot_enter and l < self.slot_goal1:
                 real_slot = (l - self.slot_enter + Board.player_enter_slot[self.id]) % 28
-
-                print ("l:%s real_slot:%s slot_enter:%s goal1:%s" % (l,real_slot,self.slot_enter, self.slot_goal1))
-
+                #print ("l:%s real_slot:%s slot_enter:%s goal1:%s" % (l,real_slot,self.slot_enter, self.slot_goal1))
 
                 self.slots[i] = Board.slots[real_slot].peg_id
                 self.slots_owner_id[i] = Board.slots[real_slot].peg_owner_id
@@ -461,6 +475,8 @@ def main():
 
             if current_player.status_winner:
                 game_is_running = False
+
+        Board.status()
 
     print("End of the game")
 
