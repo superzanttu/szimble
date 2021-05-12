@@ -89,6 +89,17 @@ class Player():
         self.slots[2] = 2
         self.slots[3] = 3
 
+    def translate_player_id(self,player_id):
+
+        if self.id == player_id:
+            print("PANIC: Can't translate own id")
+            exit(1)
+
+        if self.id == 0:
+            if player_id == 1 return (1):
+
+
+
     def set_enemy_pegs_location(self, player_id,pegs_location):
         #print ("Player %s enemy pegs locations: %s %s" % (self.id, player_id, pegs_location))
 
@@ -106,6 +117,8 @@ class Player():
                     #print ("Set peg owner id for slot",pegs_location[p])
                     s =  pegs_location[p] + player_id * 7
                     s = (s-4) % 28 + 4
+
+                    t_player_id = self.translate_player_id(player_id)
 
                     self.slots[s] = player_id*10 + p
                     self.slots_owner_id[s] = player_id + 10
