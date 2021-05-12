@@ -120,7 +120,7 @@ class Player():
 
             if l >= self.slot_enter and l < self.slot_goal1:
 
-                print ("kjkjh",l,real_slot)
+                print ("kjkjh",l,real_slot,self.slot_enter, self.slot_goal1)
 
 
                 self.slots[i] = Board.slots[real_slot].peg_id
