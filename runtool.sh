@@ -23,6 +23,7 @@ do
   case $action in
 
     r* )
+      clear
       echo === Run start.sh
       git add -v .
 
