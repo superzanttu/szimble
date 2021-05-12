@@ -96,7 +96,7 @@ class Player():
             exit(1)
 
         if self.id == 0:
-            if player_id == 1 return (1):
+            if player_id == 1: return (1)
 
 
 
