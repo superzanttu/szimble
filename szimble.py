@@ -75,14 +75,12 @@ class Board():
         slots=""
         slots_owner_id=""
         for i in range(0,28):
-            if self.slots[i] == None:
+            if cls.slots[i] == None:
                 slots += ".. "
                 slots_owner_id += ".. "
             else:
-                slots += "{:.>2} ".format(self.slots[i])
-                slots_owner_id += "{:.>2} ".format(self.slots_owner_id[i])
-
-        #print("Slots : %s" % slots)
+                slots += "{:.>2} ".format(cls.slots[i])
+                slots_owner_id += "{:.>2} ".format(cls.slots_owner_id[i])
 
         print ("Board %s" % slots)
         print ("      %s" % slots_owner_id)
