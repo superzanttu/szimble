@@ -147,8 +147,8 @@ class Player():
                 Board.peg_id[board_slot] = peg_id
                 Board.peg_owner_id[board_slot] = self.id
 
-                for i in range (0,28):
-                    print (i,Board.peg_id[i],Board.peg_owner_id[i])
+                #for i in range (0,28):
+                #    print (i,Board.peg_id[i],Board.peg_owner_id[i])
 
 
     def translate_player_id(self,enemy_id):
