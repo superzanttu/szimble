@@ -66,12 +66,12 @@ class Slot():
 
 
 class Board():
-    slots = [None for x in range(0,36)]
+    slots = [Slot for x in range(0,36)]
 
 class Player():
 
     board = Board
-    
+
 
     pprint.pprint(board)
     pprint.pprint(board.slots)
