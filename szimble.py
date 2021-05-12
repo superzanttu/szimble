@@ -62,6 +62,8 @@ log = logging.getLogger()
 
 class Player():
 
+    slots = [None for x in range(0,36)]
+
     def __init__(self, player_id):
         print("Init player: %s" % player_id)
         self.id = player_id
