@@ -117,6 +117,7 @@ class Player():
         self.slots[3] = 3
 
     def update_my_slots(self):
+
         for i in range(0,28):
             real_slot = (i + Board.player_enter_slot[self.id]) % 28
             self.slots[i] = Board.slots[real_slot].peg_id
@@ -124,7 +125,7 @@ class Player():
             #print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
 
     def update_board(self):
-
+        print("update board %s" % self.id)
         for i in range(0,28):
             if Board.slots[i].peg_owner_id == self.id: # Remove own pegs
                 Board.slots[i].peg_id = None
