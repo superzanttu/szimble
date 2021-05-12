@@ -98,7 +98,7 @@ class Board():
 
         # Top row
         row=""
-        for i in range(0,7):
+        for i in range(0,8):
             print (i)
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
@@ -109,7 +109,7 @@ class Board():
         board.append(row[:-1])
 
         # left and right sides
-        for i in range (7,14):
+        for i in range (8,14):
             row="                "
             if cls.peg_id[i] == None:
                 row += ".."
