@@ -72,7 +72,7 @@ class Board():
 
 class Player():
 
-    board = Board
+    board = Board()
 
     pprint.pprint(board)
     pprint.pprint(board.slots)
