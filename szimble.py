@@ -476,12 +476,12 @@ def main():
                     other_player.set_enemy_pegs_location(current_player.id, current_player.pegs_location)
 
             current_player.status()
-            Board.status()
+            #Board.status()
 
             if current_player.status_winner:
                 game_is_running = False
 
-        #Board.status()
+        Board.status()
 
     print("End of the game")
 
