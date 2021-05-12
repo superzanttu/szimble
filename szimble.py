@@ -82,7 +82,7 @@ class Board():
                 slots += "{:.>2} ".format(cls.slots[i].peg_id)
                 slots_owner_id += "{:.>2} ".format(cls.slots[i].peg_owner_id)
 
-        print ("                     %s" % slots)
+        print ("All players          %s" % slots)
         print ("                     %s" % slots_owner_id)
 
 class Player():
