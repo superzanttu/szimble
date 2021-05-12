@@ -74,6 +74,8 @@ class Player():
 
     board = Board(None)
 
+    pprint.pprint(board)
+
     def __init__(self, player_id):
         print("Init player: %s" % player_id)
         self.id = player_id
