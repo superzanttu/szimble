@@ -67,7 +67,7 @@ class Slot():
 
 @dataclass
 class Board():
-    slots: Slot = field([Slot for x in range(0,36)])
+    slots: []
 
 
 class Player():
