@@ -78,12 +78,12 @@ class Board():
 
         for i in range(0,28):
             print (cls.peg_id[i],cls.peg_owner_id[i])
-            if cls.slots[i].peg_id == None:
+            if cls.peg_id[i] == None:
                 slots += ".. "
                 slots_owner_id += ".. "
             else:
-                slots += "{:.>2} ".format(cls.slots[i].peg_id)
-                slots_owner_id += "{:.>2} ".format(cls.slots[i].peg_owner_id)
+                slots += "{:.>2} ".format(cls.peg_id[i])
+                slots_owner_id += "{:.>2} ".format(cls.peg_owner_id[i])
 
         print ("All players          %s" % slots)
         print ("                     %s" % slots_owner_id)
