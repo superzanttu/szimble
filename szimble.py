@@ -103,6 +103,8 @@ class Board():
             else:
                 txt += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
 
+        board.append(txt)
+
         for i in range (7,14):
             txt="..-..-..-..-..-..-..-..-..-..-..-..-"
             txt=""
@@ -113,7 +115,7 @@ class Board():
                 txt += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
 
 
-        board.append(txt)
+
 
 
         for r in board:
