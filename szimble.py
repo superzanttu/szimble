@@ -103,7 +103,7 @@ class Player():
 
     def update_my_slots(self):
         for i in range(0,36):
-            real_slot = i + self.player_enter_slot[self.player_id]
+            real_slot = i + Board.player_enter_slot[self.player_id]
             print("player %s slot %s real_slot %%",self.player_id, i,real_slot)
 
 
