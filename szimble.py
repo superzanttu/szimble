@@ -70,7 +70,7 @@ class Board():
     player_enter_slot = [0,7,14,21]
     player_exit_slot = [27,6,13,20]
 
-    def status(self):
+    def status(cls):
 
         slots=""
         slots_owner_id=""
