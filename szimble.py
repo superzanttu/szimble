@@ -66,7 +66,8 @@ class Slot():
 
 
 class Board():
-    slots = [Slot for x in range(0,28)]
+    peg_id = [None for x in range(0,28)]
+    peg_owner_id = [None for x in range(0,28)]
     player_enter_slot = [0,7,14,21]
     player_exit_slot = [27,6,13,20]
 
