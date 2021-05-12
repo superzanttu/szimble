@@ -89,16 +89,31 @@ class Player():
         self.slots[2] = 2
         self.slots[3] = 3
 
-    def translate_player_id(self,player_id):
+    def translate_player_id(self,enemy_id):
 
-        if self.id == player_id:
+        if self.id == enemy_id:
             print("PANIC: Can't translate own id")
             exit(1)
 
         if self.id == 0:
-            if player_id == 1: return (1)
-
-
+            if enemy_id == 1: return (1)
+            if enemy_id == 2: return (2)
+            if enemy_id == 3: return (3)
+        elif self.id == 1:
+            if enemy_id == 0: return (1)
+            if enemy_id == 2: return (2)
+            if enemy_id == 3: return (3)
+        elif self.id == 2:
+            if enemy_id == 0: return (1)
+            if enemy_id == 1: return (2)
+            if enemy_id == 3: return (3)
+        elif self.id == 3:
+            if enemy_id == 0: return (1)
+            if enemy_id == 1: return (2)
+            if enemy_id == 2: return (3)
+        else:
+            print("PANIC: Unknown enemy_id")
+            exit(1)
 
     def set_enemy_pegs_location(self, player_id,pegs_location):
         #print ("Player %s enemy pegs locations: %s %s" % (self.id, player_id, pegs_location))
