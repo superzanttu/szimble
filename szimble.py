@@ -117,7 +117,7 @@ class Player():
         self.slots[3] = 3
 
     def update_my_slots(self):
-
+        print("update slots %s" % self.id)
         for i in range(0,28):
             real_slot = (i + Board.player_enter_slot[self.id]) % 28
             self.slots[i] = Board.slots[real_slot].peg_id
