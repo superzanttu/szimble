@@ -61,13 +61,13 @@ logging.getLogger('').addHandler(hud_console)
 log = logging.getLogger()
 
 @dataclass
-class Slot:
+class Slot():
     peg_id: None
     peg_owner: None
 
 @dataclass
-class Board:
-    slot: None
+class Board():
+    slot: [Slot(None,None) for x in range(0,36)]
 
 
 class Player():
