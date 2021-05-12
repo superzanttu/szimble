@@ -104,7 +104,7 @@ class Player():
     def update_my_slots(self):
         for i in range(0,36):
             real_slot = i + Board.player_enter_slot[self.id]
-            print("player %s slot %s real_slot %%",self.id, i,real_slot)
+            print("player %s slot %s real_slot %%" % (self.id, i,real_slot))
 
 
     def translate_player_id(self,enemy_id):
