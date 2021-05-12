@@ -13,7 +13,7 @@ import sys
 import math
 import os
 import random
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from collections import defaultdict
 
 # Start logging before other libraries
