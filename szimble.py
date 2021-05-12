@@ -121,7 +121,7 @@ class Player():
             if l >= self.slot_enter and l < self.slot_goal1:
                 real_slot = (l - self.slot_enter + Board.player_enter_slot[self.id]) % 28
 
-                print ("kjkjh",l,real_slot,self.slot_enter, self.slot_goal1)
+                print ("l:%s real_slot:%s slot_enter:%s goal1:%s" % (l,real_slot,self.slot_enter, self.slot_goal1))
 
 
                 self.slots[i] = Board.slots[real_slot].peg_id
