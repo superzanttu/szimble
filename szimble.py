@@ -110,7 +110,7 @@ class Board():
 
         # left and right sides
         for i in range (8,14):
-            row="                "
+            row="                   "
             if cls.peg_id[i] == None:
                 row += ".."
             else:
