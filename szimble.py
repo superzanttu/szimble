@@ -116,7 +116,7 @@ class Board():
             else:
                 row += "%s%s" % (cls.peg_id[i],cls.peg_owner_id[i])
 
-            j = 33 - i
+            j = 35 - i
 
             if cls.peg_id[j] == None:
                 row =".." + row
