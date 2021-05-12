@@ -95,7 +95,7 @@ class Board():
 
         board.append("Szimbe board status:")
 
-
+        txt=""
         for i in range(0,7):
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
