@@ -99,7 +99,7 @@ class Board():
         # Top row
         row=""
         for i in range(0,7):
-            print (i)
+            #print (i)
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
                 row += "..-"
@@ -123,13 +123,13 @@ class Board():
             else:
                 row = "%s%s" % (cls.peg_id[j],cls.peg_owner_id[j]) + row
 
-            print (i,j)
+            #print (i,j)
             board.append(row)
 
         # Bottom row
         row=""
         for i in range(14,21):
-            print (i)
+            #print (i)
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
                 row = "..-" + row
