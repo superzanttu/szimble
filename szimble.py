@@ -148,7 +148,7 @@ class Player():
                 #    print (i,Board.peg_id[i],Board.peg_owner_id[i])
 
 
-    def translate_player_id(self,enemy_id):
+    def x_translate_player_id(self,enemy_id):
 
         if self.id == enemy_id:
             print("PANIC: Can't translate own id")
