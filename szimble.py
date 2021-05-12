@@ -117,6 +117,7 @@ class Player():
         self.slots[3] = 3
 
     def update_my_slots(self):
+        print("update slots ->return")
         return
         print("update slots %s" % self.id)
         for i in range(0,28):
