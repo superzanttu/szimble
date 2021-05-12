@@ -67,7 +67,7 @@ class Slot():
 
 @dataclass
 class Board():
-    slots: []
+    slots: list[int]
 
     def clear():
         slots = [None,None]
