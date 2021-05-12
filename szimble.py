@@ -70,7 +70,7 @@ class Board():
     slots: []
 
     def clear():
-        slots = []
+        slots = [None,None]
 
 
 class Player():
