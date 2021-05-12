@@ -481,6 +481,7 @@ def main():
             if current_player.status_winner:
                 print ("Winner is %s" % current_player.id)
                 game_is_running = False
+                return
 
         Board.status()
 
