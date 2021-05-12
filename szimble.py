@@ -72,7 +72,7 @@ class Board():
 
 class Player():
 
-    board = Board()
+    board = Board(None)
 
     def __init__(self, player_id):
         print("Init player: %s" % player_id)
