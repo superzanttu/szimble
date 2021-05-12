@@ -79,7 +79,7 @@ class Board():
                 slots += ".. "
                 slots_owner_id += ".. "
             else:
-                print(cls.slots[i].peg_i,cls.slots[i].peg_owner_id)
+                print(cls.slots[i].peg_id,cls.slots[i].peg_owner_id)
                 slots += "{:.>2} ".format(cls.slots[i].peg_id)
                 slots_owner_id += "{:.>2} ".format(cls.slots[i].peg_owner_id)
 
