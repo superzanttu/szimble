@@ -70,8 +70,8 @@ class Board():
     player_enter_slot = [0,7,14,21]
     player_exit_slot = [27,6,13,20]
 
+    @classmethod
     def status(cls):
-
         slots=""
         slots_owner_id=""
         for i in range(0,28):
@@ -84,7 +84,6 @@ class Board():
 
         print ("Board %s" % slots)
         print ("      %s" % slots_owner_id)
-
 
 class Player():
 
@@ -456,7 +455,6 @@ def main():
 
     print ("Players...")
 
-
     for p in players:
         p.status()
 
@@ -474,7 +472,7 @@ def main():
             if current_player.status_winner:
                 game_is_running = False
 
-        board.status()
+        Board.status()
 
     print("End of the game")
 
