@@ -95,7 +95,7 @@ class Player():
         self.status_winner = False
         self.status_peg_eaten = None
 
-        print(board)
+        print(self.board)
 
         # All pegs in start
         self.slots[0] = 0
