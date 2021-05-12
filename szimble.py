@@ -60,12 +60,11 @@ logging.getLogger('').addHandler(hud_console)
 
 log = logging.getLogger()
 
-@dataclass
 class Slot():
-    peg_id: None
-    peg_owner: None
+    peg_id = None
+    peg_owner = None
 
-@dataclass
+
 class Board():
     slots: list[int] = field(default_factory=list)
 
