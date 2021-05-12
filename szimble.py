@@ -67,7 +67,7 @@ class Slot():
 
 @dataclass
 class Board():
-    slots: [] = [Slot,Slot]*10
+    slots: [] = [Slot,Slot]
 
 
 class Player():
