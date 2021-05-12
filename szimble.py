@@ -118,10 +118,12 @@ class Player():
     def set_enemy_pegs_location(self, player_id,pegs_location):
         #print ("Player %s enemy pegs locations: %s %s" % (self.id, player_id, pegs_location))
 
+        t_player_id = self.translate_player_id(player_id)
+
         if player_id != self.id:
             for i in range(self.slot_enter, self.slot_goal1):
                 #print ("HIHI",i,self.slots_owner_id[i] , player_id)
-                if self.slots_owner_id[i] == player_id + 10:
+                if self.slots_owner_id[i] == t_player_id + 10:
                     #print ("   HI")
 
                     self.slots[i] = None
@@ -130,13 +132,11 @@ class Player():
             for p in range (0,4):
                 if pegs_location[p] and pegs_location[p] >= self.slot_enter and pegs_location[p] < self.slot_goal1 :
                     #print ("Set peg owner id for slot",pegs_location[p])
-                    s =  pegs_location[p] + player_id * 7
+                    s =  pegs_location[p] + t_player_id * 7
                     s = (s-4) % 28 + 4
 
-                    t_player_id = self.translate_player_id(player_id)
-
-                    self.slots[s] = player_id*10 + p
-                    self.slots_owner_id[s] = player_id + 10
+                    self.slots[s] = t_player_id*10 + p
+                    self.slots_owner_id[s] = t_player_id + 10
 
                     #print ("id %s enemy slot %s --> %s"  % (player_id, pegs_location[p],s))
 
