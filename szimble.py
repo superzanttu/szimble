@@ -74,6 +74,7 @@ class Board():
     def status(cls):
         slots=""
         slots_owner_id=""
+        print(cls.slots[i])
         for i in range(0,28):
             if cls.slots[i].peg_id == None:
                 slots += ".. "
