@@ -143,8 +143,8 @@ class Player():
             if peg_location >= self.slot_enter and peg_location < self.slot_goal1:
                 board_slot = (peg_location - self.slot_enter + self.board.player_enter_slot[self.id]) % 28
                 print ("  board_slot:%s  " % (board_slot))
-                #Board.slots[board_slot].peg_id = peg_id
-                #Board.slots[board_slot].peg_owner_id = self.id
+                Board.slots[board_slot].peg_id = peg_id
+                Board.slots[board_slot].peg_owner_id = self.id
 
 
     def translate_player_id(self,enemy_id):
