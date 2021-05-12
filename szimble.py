@@ -76,6 +76,7 @@ class Board():
         slots_owner_id=""
 
         for i in range(0,28):
+            print (cls.slots[i].peg_id)
             if cls.slots[i].peg_id == None:
                 slots += ".. "
                 slots_owner_id += ".. "
