@@ -67,6 +67,7 @@ class Slot:
 
 @dataclass
 class Board:
+    name: "jk"
     slot: [Slot(None,None) for x in range(0,36)]
 
 
