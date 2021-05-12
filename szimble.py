@@ -69,7 +69,7 @@ class Slot():
 class Board():
     slots: []
 
-    def clear(self):
+    def clear():
         slots = []
 
 
