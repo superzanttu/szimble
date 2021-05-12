@@ -13,6 +13,7 @@ import sys
 import math
 import os
 import random
+from dataclasses import dataclass
 from collections import defaultdict
 
 # Start logging before other libraries
@@ -58,6 +59,11 @@ logging.getLogger('').addHandler(hud_console)
 
 
 log = logging.getLogger()
+
+@dataclass
+class Slot:
+    peg_id: None
+    peg_owner: None
 
 
 class Player():
