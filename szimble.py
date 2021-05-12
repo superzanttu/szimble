@@ -67,7 +67,7 @@ class Slot():
 
 @dataclass
 class Board():
-    slot: Slot
+    slot: Slot()
 
 
 class Player():
