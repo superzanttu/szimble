@@ -128,7 +128,7 @@ class Board():
 
         # Bottom row
         row=""
-        for i in range(14,22):
+        for i in range(14,21):
             print (i)
             #print (cls.peg_id[i],cls.peg_owner_id[i])
             if cls.peg_id[i] == None:
