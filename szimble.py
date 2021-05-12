@@ -474,7 +474,7 @@ def main():
             if current_player.status_winner:
                 game_is_running = False
 
-        Board.status()
+        board.status()
 
     print("End of the game")
 
