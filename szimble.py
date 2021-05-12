@@ -71,8 +71,7 @@ class Board():
 class Player():
 
     board = Board
-    board.clear()
-
+    
 
     pprint.pprint(board)
     pprint.pprint(board.slots)
