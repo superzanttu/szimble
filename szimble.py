@@ -115,6 +115,7 @@ class Player():
                 Board.slots[i].peg_id = None
                 Board.slots[i].peg_owner_id = None
 
+        print(self.pegs_location)
         for l in self.pegs_location:
 
 
