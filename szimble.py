@@ -269,7 +269,7 @@ class Player():
 
 
     def move_peg_to_slot(self,peg_id,target_slot):
-        print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
+        print("Move player %s peg %s to slot %s" % (self.id, peg_id,target_slot))
 
         # Clear current location
         if self.pegs_location[peg_id] != None:
@@ -286,7 +286,7 @@ class Player():
             exit(1)
 
     def move_peg_over_enemy(self,peg_id,target_slot):
-        print("Move player %s peg %s over enemy in slot %s" % (self.name, id,target_slot))
+        print("Move player %s peg %s over enemy in slot %s" % (self.id, peg_id,target_slot))
 
         # Clear current location
         if self.pegs_location[peg_id] != None:
