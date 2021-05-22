@@ -245,7 +245,7 @@ class Player():
 
 
     def move_peg_to_goal(self,peg_id,target_slot):
-        print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
+        print("Move player %s peg %s to goal slot %s" % (self.id, peg_id,target_slot))
 
         self.pegs_in_goal += 1
         self.pegs_in_game -= 1
