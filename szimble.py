@@ -473,7 +473,7 @@ def main():
 
     game_is_running = True
     while game_is_running:
-        key = input("...press enter to continue")
+
         print ("\n-------------------------")
         for current_player in players:
             current_player.play()
@@ -491,7 +491,7 @@ def main():
 
         Board.status()
         Board.draw()
-
+        key = input("...press enter to continue")
 
     print("End of the game")
 
