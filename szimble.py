@@ -224,7 +224,7 @@ class Player():
                 return
 
     def move_peg_to_game(self,peg_id):
-        print("Move player %s peg %s to game" % (self.name, id))
+        print("Move player %s peg %s to game" % (self.id, peg_id))
 
         self.pegs_in_start -= 1
         self.pegs_in_game += 1
