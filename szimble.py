@@ -373,14 +373,14 @@ class Player():
                 rule_target_slot["E%s" % id] = self.slot_enter
                 print ("Player %s peg %s enter game [%s]" % (self.id, id,rule_score["E%s" % id]))
 
-            # Send enemy peg to start
-            if target_slot < self.slot_goal1 and \
-                self.slots[target_slot] != None:
+            ## Send enemy peg to start
+            #if target_slot < self.slot_goal1 and \
+            #    self.slots[target_slot] != None:
+            #
+            #    if self.slots[target_slot] > 9: # Enemy peg ids are over 9
+            #        rule_score["X%s" % id] += 90
+            #        rule_target_slot["X%s" % id] = target_slot
 
-                if self.slots[target_slot] > 9: # Enemy peg ids are over 9
-                    rule_score["X%s" % id] += 90
-                    rule_target_slot["X%s" % id] = target_slot
-                    print ("Player %s peg %s eat enemy peg from %s [%s]" % (self.id,id,target_slot, rule_score["X%s" % id]))
 
             # Move peg X to goal
             if self.pegs_location[id] < self.slot_goal1 \
@@ -391,6 +391,15 @@ class Player():
                 rule_score["G%s" % id] += 100 + self.pegs_location[id] # Peg closest to the goal have higher score
                 rule_target_slot["G%s" % id] = target_slot
                 print ("Player %s peg %s move to goal slot %s [%s]" % (self.id,id, target_slot,rule_score["G%s" % id]))
+
+            # Eat enemy peg
+            if self.pegs_location[id] >= self.slot_enter \
+                and target_slot < self.slot_goal1:
+
+                if self.slots[target_slot] != None and self.slots_owner_id[target_slot] != self.id # Target slot have enemy peg
+                    rule_score["X%s" % id] += 90 + self.pegs_location[id]
+                    rule_target_slot["X%s" % id] = target_slot
+                    print ("Player %s peg %s move to enemy %s slot %s [%s]" % (self.id,id, target_slot,rule_score["X%s" % id]))
 
             # Move peg X
             if self.pegs_location[id] >= self.slot_enter \
@@ -481,6 +490,7 @@ def main():
 
         Board.status()
         Board.draw()
+        input("...press enter to continue")
 
     print("End of the game")
 
