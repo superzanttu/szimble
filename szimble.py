@@ -362,6 +362,8 @@ class Player():
 
             target_slot = self.pegs_location[id] + self.dice
             current_slot = self.pegs_location[id]
+            target_slot_owner = self.slots_owner_id[target_slot]
+
             #print (target_slot)
 
             # Move peg to enter slot
@@ -396,10 +398,10 @@ class Player():
             if self.pegs_location[id] >= self.slot_enter \
                 and target_slot < self.slot_goal1:
 
-                if self.slots[target_slot] != None and self.slots_owner_id[target_slot] != self.id: # Target slot have enemy peg
+                if target_slot_owner != None and target_slot_owner != self.id: # Target slot have enemy peg
                     rule_score["X%s" % id] += 90 + self.pegs_location[id]
                     rule_target_slot["X%s" % id] = target_slot
-                    print ("Player %s peg %s move to enemy %s slot %s [%s]" % (self.id,id, target_slot,rule_score["X%s" % id]))
+                    print ("Player %s peg %s move to enemy %s slot %s [%s]" % (self.id,id, target_slot_owner,target_slot,rule_score["X%s" % id]))
 
             # Move peg X
             if self.pegs_location[id] >= self.slot_enter \
