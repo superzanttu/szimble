@@ -183,7 +183,7 @@ class Player():
             #print("player %s slot %s board_slot %s" % (self.id, i,board_slot))
 
     def update_board(self):
-        print("Update board using player %s slots board %s" % self.id)
+        print("Update board using player %s slot statuss" % self.id)
         for i in range(0,28):
             if Board.peg_owner_id[i] == self.id: # Remove own pegs
                 Board.peg_id[i] = None
