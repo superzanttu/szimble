@@ -92,9 +92,7 @@ class Board():
     def draw(cls):
 
         board=[]
-
         board.append("Szimbe board status:")
-
 
         # Top row
         row=""
@@ -137,11 +135,8 @@ class Board():
                 row = "%s%s-" % (cls.peg_owner_id[i],cls.peg_id[i]) + row
         board.append(row[:-1])
 
-
-
         for r in board:
             print(r)
-
 
 class Player():
 
