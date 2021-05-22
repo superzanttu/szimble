@@ -104,7 +104,7 @@ class Board():
             if cls.peg_id[i] == None:
                 row += "..-"
             else:
-                row += "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i])
+                row += "%s%s-" % (cls.peg_owner_id[i],cls.peg_id[i])
 
         board.append(row[:-1])
 
@@ -114,14 +114,14 @@ class Board():
             if cls.peg_id[i] == None:
                 row += ".."
             else:
-                row += "%s%s" % (cls.peg_id[i],cls.peg_owner_id[i])
+                row += "%s%s" % (cls.peg_owner_id[i],cls.peg_id[i])
 
             j = 35 - i
 
             if cls.peg_id[j] == None:
                 row =".." + row
             else:
-                row = "%s%s" % (cls.peg_id[j],cls.peg_owner_id[j]) + row
+                row = "%s%s" % (cls.peg_owner_id[i],cls.peg_id[i]) + row
 
             #print (i,j)
             board.append(row)
@@ -134,7 +134,7 @@ class Board():
             if cls.peg_id[i] == None:
                 row = "..-" + row
             else:
-                row = "%s%s-" % (cls.peg_id[i],cls.peg_owner_id[i]) + row
+                row = "%s%s-" % (cls.peg_owner_id[i],cls.peg_id[i]) + row
         board.append(row[:-1])
 
 
