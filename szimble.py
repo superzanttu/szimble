@@ -175,7 +175,7 @@ class Player():
         self.slots[3] = 3
 
     def update_my_slots(self):
-        #print("update slots %s" % self.id)
+        print("Update player %s slots" % self.id)
         for i in range(0,28):
             board_slot = (i + Board.player_enter_slot[self.id]) % 28
             self.slots[i] = Board.peg_id[board_slot]
@@ -183,7 +183,7 @@ class Player():
             #print("player %s slot %s board_slot %s" % (self.id, i,board_slot))
 
     def update_board(self):
-        #print("update board %s" % self.id)
+        print("Update board using player %s slots board %s" % self.id)
         for i in range(0,28):
             if Board.peg_owner_id[i] == self.id: # Remove own pegs
                 Board.peg_id[i] = None
@@ -203,7 +203,7 @@ class Player():
                 #    print (i,Board.peg_id[i],Board.peg_owner_id[i])
 
     def x_move_peg_to_start(self,peg_id):
-        #print("Move player %s peg %s to start" % (self.name, id))
+        print("Move player %s peg %s to start" % (self.name, id))
 
         self.pegs_in_start += 1
         self.pegs_in_game -= 1
@@ -223,7 +223,7 @@ class Player():
                 return
 
     def move_peg_to_game(self,peg_id):
-        #print("Move player %s peg %s to game" % (self.name, id))
+        print("Move player %s peg %s to game" % (self.name, id))
 
         self.pegs_in_start -= 1
         self.pegs_in_game += 1
@@ -244,7 +244,7 @@ class Player():
 
 
     def move_peg_to_goal(self,peg_id,target_slot):
-        #print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
+        print("Move player %s peg %s to goal slot %s" % (self.name, id,target_slot))
 
         self.pegs_in_goal += 1
         self.pegs_in_game -= 1
@@ -268,7 +268,7 @@ class Player():
 
 
     def move_peg_to_slot(self,peg_id,target_slot):
-        #print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
+        print("Move player %s peg %s to slot %s" % (self.name, id,target_slot))
 
         # Clear current location
         if self.pegs_location[peg_id] != None:
@@ -285,7 +285,7 @@ class Player():
             exit(1)
 
     def move_peg_over_enemy(self,peg_id,target_slot):
-        #print("Move player %s peg %s over enemy in slot %s" % (self.name, id,target_slot))
+        print("Move player %s peg %s over enemy in slot %s" % (self.name, id,target_slot))
 
         # Clear current location
         if self.pegs_location[peg_id] != None:
@@ -298,7 +298,7 @@ class Player():
             self.slots_owner_id[target_slot] = self.id
             self.pegs_location[peg_id]= target_slot
         else:
-            print("ERROR: Target slot occupied")
+            print("ERROR: Target slot not occupied")
             exit(1)
 
 
