@@ -179,8 +179,8 @@ class Player():
         for i in range(0,28):
             board_slot = (i + Board.player_enter_slot[self.id]) % 28
             player_slot = i + self.slot_enter
-            #self.slots[i] = Board.peg_id[board_slot]
-            #self.slots_owner_id[i] = Board.peg_owner_id[board_slot]
+            self.slots[player_slot] = Board.peg_id[board_slot]
+            self.slots_owner_id[player_slot] = Board.peg_owner_id[board_slot]
             print("player %s slot %s board_slot %s" % (self.id, player_slot,board_slot))
 
     def update_board(self):
