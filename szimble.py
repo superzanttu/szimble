@@ -493,7 +493,7 @@ def main():
 
         Board.status()
         Board.draw()
-        key = input("...press enter to continue")
+        key = input("PRESS ENTER TO CONTINUE")
 
     print("End of the game")
 
