@@ -180,7 +180,7 @@ class Player():
             board_slot = (i + Board.player_enter_slot[self.id]) % 28
             self.slots[i] = Board.peg_id[board_slot]
             self.slots_owner_id[i] = Board.peg_owner_id[board_slot]
-            #print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
+            print("player %s slot %s real_slot %s" % (self.id, i,real_slot))
 
     def update_board(self):
         #print("update board %s" % self.id)
