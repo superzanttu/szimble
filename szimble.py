@@ -176,11 +176,12 @@ class Player():
 
     def update_my_slots(self):
         print("Update player %s slots" % self.id)
-        for i in range(self.slot_enter ,self.slot_goal1):
+        for i in range(0,28):
             board_slot = (i + Board.player_enter_slot[self.id]) % 28
-            self.slots[i] = Board.peg_id[board_slot]
-            self.slots_owner_id[i] = Board.peg_owner_id[board_slot]
-            print("player %s slot %s board_slot %s" % (self.id, i,board_slot))
+            player_slot = i +
+            #self.slots[i] = Board.peg_id[board_slot]
+            #self.slots_owner_id[i] = Board.peg_owner_id[board_slot]
+            print("player %s slot %s board_slot %s" % (self.id, player_slot,board_slot))
 
     def update_board(self):
         print("Update board using player %s slot status" % self.id)
