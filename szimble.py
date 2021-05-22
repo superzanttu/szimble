@@ -337,6 +337,7 @@ class Player():
         print ("        Owner id     %s" % slots_owner_id)
 
     def play(self):
+        print ("Player %s turn" % self.id)
         self.update_my_slots()
 
 
