@@ -403,7 +403,7 @@ class Player():
                 if target_slot_owner != None and target_slot_owner != self.id: # Target slot have enemy peg
                     rule_score["X%s" % peg_id] += 90 + self.pegs_location[peg_id]
                     rule_target_slot["X%s" % peg_id] = target_slot
-                    print ("Player %s peg %s eat player %s peg %s in slot %s [%s]" % (self.id,peg_id, target_slot_owner, self.slots[target_slot],  vv    target_slot_owner,target_slot,rule_score["X%s" % id]))
+                    print ("Player %s peg %s eat player %s peg %s in slot %s [%s]" % (self.id,peg_id, target_slot_owner, self.slots[target_slot],target_slot,rule_score["X%s" % id]))
 
             # Move peg X
             if self.pegs_location[peg_id] >= self.slot_enter \
