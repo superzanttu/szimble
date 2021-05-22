@@ -421,7 +421,7 @@ class Player():
                         rule_score["M%s" % peg_id] += 50
 
                     if self.pegs_location[peg_id] in self.slot_enter_enemy: # Priorize peg in enemy enter slot
-                        print("Player %s peg %s is in enemy enter slot %s [+60]" % (self.idpeg_idid, self.pegs_location[peg_id]))
+                        print("Player %s peg %s is in enemy enter slot %s [+60]" % (self.id, self.pegs_location[peg_id]))
                         rule_score["M%s" % peg_id] += 60
 
                     rule_target_slot["M%s" % peg_id] = target_slot
